@@ -1,22 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Hello world!</title>
-    <!-- Required meta tags -->
-    <meta charset="utf=8">
-    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Hello world!</title>
+  <!-- Required meta tags -->
+  <meta charset="utf=8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <style>
+  body {
+    font-family: Monospace;
+  }
+  </style>
+</head>
 
-  <body>
-    <h1>Hello world!</h1>
+<body>
+  <h1 class="text-center">Create your Monster!</h1>
+  <div class="text-center">
+    <form> <!-- Functionality not implemented at all -->
+      Name: <input type="text" name="name" value="Vortigaunt"><br>
+      Size:
+      <select>
+        <option value="tiny">Tiny</option>
+        <option value="small">Small</option>
+        <option value="medium" selected="selected">Medium</option>
+        <option value="large">Large</option>
+        <option value="huge">Huge</option>
+        <option value="gargantuan">Gargantuan</option>
+      </select><br>
+      Offensive Rating: <input type="text" name="offensiveRating"><br>
+      Defensive Rating: <input type="text" name="defensiveRating"><br>
+      Challenge Rating: <input type="text" name="challengeRating"><br> <!-- (Offensive CR + Defensive CR) / 2 -->
+      Traits: <input type="text" name="traits"><br> <!-- Placeholder, will make this influence other stats in the future. -->
+      Proficiency Bonus: <input type="text" name="proficiencyBonus"><br> <!-- Dependent on CR, see DMG -->
+      Armor Class: <input type="text" name="armorClass"><br>
+      Hit Points: <input type="text" name="hitPoints"><br>
+      Strength: <input type="text" name="strength"> Dexterity: <input type="text" name="dexterity"> Constitution: <input type="text" name="constitution"> Intelligence: <input type="text" name="intelligence"> Wisdom: <input type="text" name="wisdom"> Charisma: <input type="text" name="charisma"><br>
+      Attack: <input type="text" name="attack"><br>
+      Damage: <input type="text" name="damage"><br>
+      <input class="btn btn-primary" type="submit" value="Submit"> <input class="btn btn-basic" type="reset" value="Reset">
+    </form>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
 </html>
