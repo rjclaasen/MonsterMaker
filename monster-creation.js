@@ -85,7 +85,12 @@ function setupChallengeRatings() {
   });
 }
 
+function setupTooltips() {
+  $('[data-toggle="tooltip"]').tooltip();
+}
+
 $(document).ready(function() {
   setupSizeChoiceEffects();
   setupChallengeRatings();
+  setupTooltips();
 });
