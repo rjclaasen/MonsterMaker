@@ -1,26 +1,49 @@
+var ocr;
+var dcr;
+var cr;
+
 function setupChallengeRatings() {
   var crTextBox = $("#crTextBox");
   var ocrTextBox = $("#ocrTextBox");
   var dcrTextBox = $("#dcrTextBox");
 
-  var oldBaseCR = parseInt(crTextBox.val());
-  var newBaseCR = oldBaseCR;
+  ocr = parseInt(ocrTextBox.val());
+  dcr = parseInt(dcrTextBox.val());
+  cr = parseInt(crTextBox.val());
 
+  var docr = ocr - cr;
+  var ddcr = dcr - cr;
+
+  var oldCR = cr;
+
+  // On CR textbox change.
   crTextBox.on('input', function() {
-    oldBaseCR = newBaseCR;
-    newBaseCR = parseInt($(this).val());
-    var dCR = newBaseCR - oldBaseCR;
+    cr = parseInt($(this).val());
 
-    if(!(isNaN(parseInt(ocrTextBox.val())))) {
-      ocrTextBox.val(parseInt(ocrTextBox.val()) + dCR);
-    } else {
-      ocrTextBox.val(newBaseCR);
-    }
-    if(!isNaN(parseInt(dcrTextBox.val()))) {
-      dcrTextBox.val(parseInt(dcrTextBox.val()) + dCR);
-    } else {
-      dcrTextBox.val(newBaseCR);
-    }
+    ocr = cr + docr;
+    ocrTextBox.val(ocr);
+    dcr = cr + ddcr;
+    dcrTextBox.val(dcr);
+  });
+
+  // On Offensive CR textbox change.
+  ocrTextBox.on('input', function() {
+    ocr = parseInt($(this).val());
+
+    cr = (ocr + dcr) / 2;
+    docr = ocr - cr;
+    ddcr = dcr - cr;
+    crTextBox.val(cr);
+  });
+
+  // On Defensive CR textbox change.
+  dcrTextBox.on('input', function() {
+    dcr = parseInt($(this).val());
+
+    cr = (ocr + dcr) / 2;
+    docr = ocr - cr;
+    ddcr = dcr - cr;
+    crTextBox.val(cr);
   });
 }
 
