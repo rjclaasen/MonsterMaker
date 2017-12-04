@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
   <title>Hello world!</title>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <!-- Required meta tags -->
   <meta charset="utf=8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <style>
-  body {
-    font-family: Monospace;
-  }
-  </style>
+  <!-- bootstrap-slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+  <link rel="stylesheet" tyle="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="index.css"> <!-- index.css here -->
+
+  <!-- Custom Javascript -->
+  <script src="monster-creation.js"></script>
 </head>
 
 <body>
@@ -31,7 +38,7 @@
       </select><br>
       Offensive Rating: <input type="text" name="offensiveRating"><br>
       Defensive Rating: <input type="text" name="defensiveRating"><br>
-      Challenge Rating: <input type="text" name="challengeRating"><br> <!-- (Offensive CR + Defensive CR) / 2 -->
+      Challenge Rating: <input id="crSlider" data-slider-id="crSlider" type="text" data-slider-min="0" data-slider-max="34" data-slider-step="1" data-slider-value="5"/><br> <!-- (Offensive CR + Defensive CR) / 2 -->
       Traits: <input type="text" name="traits"><br> <!-- Placeholder, will make this influence other stats in the future. -->
       Proficiency Bonus: <input type="text" name="proficiencyBonus"><br> <!-- Dependent on CR, see DMG -->
       Armor Class: <input type="text" name="armorClass"><br>
@@ -42,11 +49,5 @@
       <input class="btn btn-primary" type="submit" value="Submit"> <input class="btn btn-basic" type="reset" value="Reset">
     </form>
   </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
