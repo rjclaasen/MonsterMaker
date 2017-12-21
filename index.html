@@ -27,7 +27,7 @@
 
   <!-- Nav tabs -->
   <div class="container">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" id="navTabs">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#basics" role="tab" aria-controls="basics">Basics</a>
       </li>
@@ -195,8 +195,9 @@
     </div>
 
     <div class="container text-center">
-      <a class="btn btn-secondary" id="btnPrevious">Previous</a>
-      <a class="btn btn-primary" id="btnNext">Next</a>
+      <button type="button" class="btn btn-secondary" id="btnPrevious" disabled>Previous</button>
+      <button type="button" class="btn btn-primary" id="btnNext">Next</button>
+      <button type="button" class="btn btn-primary" type="submit" id="btnSubmit" style="display: none">Submit</button>
     </div>
   </form>
 </body>
