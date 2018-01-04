@@ -1,0 +1,8 @@
+[
+  {
+    "id":"aggressive",
+    "name":"Aggressive",
+    "exampleMonster":"Orc",
+    "crEffect":"Increase the monster's effective per-round damage output by 2."
+  }
+]
