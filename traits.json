@@ -4,5 +4,11 @@
     "name":"Aggressive",
     "exampleMonster":"Orc",
     "crEffect":"Increase the monster's effective per-round damage output by 2."
+  },
+  {
+    "id":"ambusher",
+    "name":"Ambusher",
+    "exampleMonster":"Doppelganger",
+    "crEffect":"Increase the monster's effective attack bonus by 1."
   }
 ]

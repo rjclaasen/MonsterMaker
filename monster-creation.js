@@ -3,7 +3,7 @@ function setupSizeChoiceEffects() {
   var numDiceFromSizeText = $("#numDiceFromSizeText");
   var hitDieSize = $("#hitDieSize");
 
-  sizeSelect.on('change', function() {
+  sizeSelect.on("change", function() {
     var numDice = "1"; // This is a string because gargantuan can have 4 or more.
     var hitDie = "d8";
     var valueSelected = this.value;
