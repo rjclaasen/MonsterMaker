@@ -35,7 +35,11 @@ function SetupSelectOptionEffects(){
 
     exampleMonsterText.val(exampleMonster);
     crEffectText.text(crEffect);
-    traitEffectText.text(traitEffect); //TODO: Ensure markup can be used to highlight spell names, recharge times, etc.
+    if(traitEffect != null) {
+      traitEffectText.text(traitEffect); //TODO: Ensure markup can be used to highlight spell names, recharge times, etc.
+    } else {
+      traitEffectText.text("== Not yet implemented ==");
+    }
   });
 }
 
