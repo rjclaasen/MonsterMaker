@@ -34,11 +34,15 @@ function SetupSelectOptionEffects(){
     traitDescription = matchingJsonObject.traitDescription;
 
     exampleMonsterText.val(exampleMonster);
-    crEffectText.text(crEffect);
+    if(crEffect != null) {
+      crEffectText.text(crEffect);
+    } else {
+      crEffectText.text("-");
+    }
     if(traitDescription != null) {
       traitDescriptionText.text(traitDescription); //TODO: Ensure markup can be used to highlight spell names, recharge times, etc.
     } else {
-      traitDescriptionText.text("== Not yet implemented ==");
+      traitDescriptionText.text("= This description hasn't been added yet. =");
     }
   });
 }
