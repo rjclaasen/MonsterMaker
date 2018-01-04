@@ -148,7 +148,7 @@
         <div class="text-center container">
           <div class="form-group row">
             <label class="col-sm-2" for="traitsText">Traits:</label>
-            <div class="col-sm-2">
+            <div class="col-sm-4">
               <select id="traitsSelect" class="form-control form-control-sm">
                 <!-- traitsjson.js will append <option> elements here -->
               </select>
@@ -157,7 +157,7 @@
 
           <div class="form-group row">
             <label class="col-sm-2" for="exampleMonsterText">Example Monster:</label>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <input id="exampleMonsterText" class="form-control form-control-sm" type="text" name="exampleMonster" value="Orc" readonly>
             </div>
           </div>
@@ -165,7 +165,14 @@
           <div class="form-group row">
             <label class="col-sm-2" for="crEffectText">Effect on CR:</label>
             <div class="col-sm-5">
-              <textarea id="crEffectText" class="form-control form-control-sm" name="EffectOnCR" rows="5" readonly>Increase the monster's effective per-round damage output by 2.</textarea>
+              <textarea id="crEffectText" class="form-control form-control-sm" name="crEffect" rows="4" readonly>Increase the monster's effective per-round damage output by 2.</textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2" for="traitEffectText">Trait effect:</label>
+            <div class="col-sm-5">
+              <textarea id="traitEffectText" class="form-control form-control-sm" name="traitEffect" rows="6" readonly>As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.</textarea>
             </div>
           </div>
         </div>
