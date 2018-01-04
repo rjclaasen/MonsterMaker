@@ -4,70 +4,70 @@
     "name":"Aggressive",
     "exampleMonster":"Orc",
     "crEffect":"Increase the monster's effective per-round damage output by 2.",
-    "traitEffect":"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+    "traitDescription":"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
   },
   {
     "id":"ambusher",
     "name":"Ambusher",
     "exampleMonster":"Doppelganger",
     "crEffect":"Increase the monster's effective attack bonus by 1.",
-    "traitEffect":"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised."
+    "traitDescription":"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised."
   },
   {
     "id":"amorphous",
     "name":"Amorphous",
     "exampleMonster":"Black pudding",
     "crEffect":"-",
-    "traitEffect":"The pudding can move through a space as narrow as 1 inch wide without squeezing."
+    "traitDescription":"The pudding can move through a space as narrow as 1 inch wide without squeezing."
   },
   {
     "id":"amphibious",
     "name":"Amphibious",
     "exampleMonster":"Kuo-toa",
     "crEffect":"-",
-    "traitEffect":"The kuo-toa can breathe air and water."
+    "traitDescription":"The kuo-toa can breathe air and water."
   },
   {
     "id":"angelicWeapons",
     "name":"Angelic Weapons",
     "exampleMonster":"Deva",
     "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait.",
-    "traitEffect":"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage."
+    "traitDescription":"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage."
   },
   {
     "id":"antimagicSusceptibility",
     "name":"Antimagic Susceptibility",
     "exampleMonster":"Flying sword",
     "crEffect":"-",
-    "traitEffect":"The sword is incapacitated while in the area of an <i>antimagic field</i>. If targeted by <i>dispel magic</i>, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+    "traitDescription":"The sword is incapacitated while in the area of an <i>antimagic field</i>. If targeted by <i>dispel magic</i>, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
   },
   {
     "id":"avoidance",
     "name":"Avoidance",
     "exampleMonster":"Demilich",
     "crEffect":"Increase the monster's effective AC by 1.",
-    "traitEffect":"If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+    "traitDescription":"If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
   },
   {
     "id":"blindSenses",
     "name":"Blind Senses",
     "exampleMonster":"Grimlock",
     "crEffect":"-",
-    "traitEffect":"The grimlock can't use its blindsight while deafened and unable to smell."
+    "traitDescription":"The grimlock can't use its blindsight while deafened and unable to smell."
   },
   {
     "id":"bloodFrenzy",
     "name":"Blood Frenzy",
     "exampleMonster":"Sahuagin",
     "crEffect":"Increase the monster's effective attack bonus by 4.",
-    "traitEffect":"The sahuagin has advantage on melee attacks against any creature that doesn't have all its hit points."
+    "traitDescription":"The sahuagin has advantage on melee attacks against any creature that doesn't have all its hit points."
   },
   {
     "id":"breathWeapon",
     "name":"Breath Weapon",
     "exampleMonster":"Ancient black dragon",
     "crEffect":"For the purpose of determining effective damage output, assume the breath weapon hits two targets, and that each target fails its saving throw.",
-    "traitEffect":"<b>(Recharge 5-6).</b> The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one."
+    "traitDescription":"<b>(Recharge 5-6).</b> The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one."
   },
   {
     "id":"brute",

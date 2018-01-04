@@ -20,25 +20,25 @@ function SetupSelectOptionEffects(){
   var traitsSelect = $("#traitsSelect");
   var exampleMonsterText = $("#exampleMonsterText");
   var crEffectText = $("#crEffectText");
-  var traitEffectText = $("#traitEffectText");
+  var traitDescriptionText = $("#traitDescriptionText");
 
   traitsSelect.on("change", function() {
     var exampleMonster = "Vortigaunt"
     var crEffect = "None."
-    var traitEffect = "None."
+    var traitDescription = "None."
     var valueSelected = this.value;
 
     var matchingJsonObject = $.grep(jsonData, function(obj){return obj.id == valueSelected;})[0];
     exampleMonster = matchingJsonObject.exampleMonster;
     crEffect = matchingJsonObject.crEffect;
-    traitEffect = matchingJsonObject.traitEffect;
+    traitDescription = matchingJsonObject.traitDescription;
 
     exampleMonsterText.val(exampleMonster);
     crEffectText.text(crEffect);
-    if(traitEffect != null) {
-      traitEffectText.text(traitEffect); //TODO: Ensure markup can be used to highlight spell names, recharge times, etc.
+    if(traitDescription != null) {
+      traitDescriptionText.text(traitDescription); //TODO: Ensure markup can be used to highlight spell names, recharge times, etc.
     } else {
-      traitEffectText.text("== Not yet implemented ==");
+      traitDescriptionText.text("== Not yet implemented ==");
     }
   });
 }
