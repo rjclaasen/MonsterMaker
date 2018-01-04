@@ -7,7 +7,6 @@ function ShowOrHideNextSubmit() {
     $("#btnSubmit").show();
   }
   else if(current.is($("#navTabs > .nav-item").first())) {
-    console.log("beep");
     $("#btnPrevious").prop("disabled", true);
     $("#btnNext").show();
     $("#btnSubmit").hide();
