@@ -1,328 +1,270 @@
 [
   {
-    "id":"aggressive",
     "name":"Aggressive",
     "exampleMonster":"Orc",
     "crEffect":"Increase the monster's effective per-round damage output by 2.",
     "traitDescription":"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
   },
   {
-    "id":"ambusher",
     "name":"Ambusher",
     "exampleMonster":"Doppelganger",
     "crEffect":"Increase the monster's effective attack bonus by 1.",
     "traitDescription":"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised."
   },
   {
-    "id":"amorphous",
     "name":"Amorphous",
     "exampleMonster":"Black pudding",
     "traitDescription":"The pudding can move through a space as narrow as 1 inch wide without squeezing."
   },
   {
-    "id":"amphibious",
     "name":"Amphibious",
     "exampleMonster":"Kuo-toa",
     "traitDescription":"The kuo-toa can breathe air and water."
   },
   {
-    "id":"angelicWeapons",
     "name":"Angelic Weapons",
     "exampleMonster":"Deva",
     "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait.",
     "traitDescription":"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage."
   },
   {
-    "id":"antimagicSusceptibility",
     "name":"Antimagic Susceptibility",
     "exampleMonster":"Flying sword",
     "traitDescription":"The sword is incapacitated while in the area of an <i>antimagic field</i>. If targeted by <i>dispel magic</i>, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
   },
   {
-    "id":"avoidance",
     "name":"Avoidance",
     "exampleMonster":"Demilich",
     "crEffect":"Increase the monster's effective AC by 1.",
     "traitDescription":"If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
   },
   {
-    "id":"blindSenses",
     "name":"Blind Senses",
     "exampleMonster":"Grimlock",
     "traitDescription":"The grimlock can't use its blindsight while deafened and unable to smell."
   },
   {
-    "id":"bloodFrenzy",
     "name":"Blood Frenzy",
     "exampleMonster":"Sahuagin",
     "crEffect":"Increase the monster's effective attack bonus by 4.",
     "traitDescription":"The sahuagin has advantage on melee attacks against any creature that doesn't have all its hit points."
   },
   {
-    "id":"breathWeapon",
     "name":"Breath Weapon",
     "exampleMonster":"Ancient black dragon",
     "crEffect":"For the purpose of determining effective damage output, assume the breath weapon hits two targets, and that each target fails its saving throw.",
     "traitDescription":"<b>(Recharge 5-6).</b> The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one."
   },
   {
-    "id":"brute",
     "name":"Brute",
     "exampleMonster":"Bugbear",
     "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait."
   },
   {
-    "id":"chameleonSkin",
     "name":"Chameleon Skin",
     "exampleMonster":"Troglodyte"
   },
   {
-    "id":"changeShape",
     "name":"Change Shape",
     "exampleMonster":"Ancient brass dragon"
   },
   {
-    "id":"charge",
     "name":"Charge",
     "exampleMonster":"Centaur",
     "crEffect":"Increase the monster's damage on one attack by the amount noted in the trait."
   },
   {
-    "id":"charm",
     "name":"Charm",
     "exampleMonster":"Vampire"
   },
   {
-    "id":"constrict",
     "name":"Constrict",
     "exampleMonster":"Constrictor snake",
     "crEffect":"Increase the monster's effective AC by 1."
   },
   {
-    "id":"damageAbsorption",
     "name":"Damage Absorption",
     "exampleMonster":"Flesh golem"
   },
   {
-    "id":"damageTransfer",
     "name":"Damage Transfer",
     "exampleMonster":"Darkmantle",
     "crEffect":"Double the monster's effective hit points. Add one-third of the monster's hit points to its per-round damage."
   },
   {
-    "id":"deathBurst",
     "name":"Death Burst",
     "exampleMonster":"Magmin",
     "crEffect":"Increase the monster's effective damage output for 1 round by the amount noted in the trait, and assume it affects two creatures."
   },
   {
-    "id":"devilSight",
     "name":"Devil Sight",
     "exampleMonster":"Barbed Devil"
   },
   {
-    "id":"dive",
     "name":"Dive",
     "exampleMonster":"Aarakocra",
     "crEffect":"Increase the monster's effective damage on one attack by the amount noted in the trait."
   },
   {
-    "id":"echolocation",
     "name":"Echolocation",
     "exampleMonster":"Hook horror"
   },
   {
-    "id":"elementalBody",
     "name":"Elemental Body",
     "exampleMonster":"Azer",
     "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait."
   },
   {
-    "id":"enlarge",
     "name":"Enlarge",
     "exampleMonster":"Duergar",
     "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait."
   },
   {
-    "id":"etherealness",
     "name":"Etherealness",
     "exampleMonster":"Night hag"
   },
   {
-    "id":"falseAppearance",
     "name":"False Appearance",
     "exampleMonster":"Gargoyle"
   },
   {
-    "id":"feyAncestry",
     "name":"Fey Ancestry",
     "exampleMonster":"Drow"
   },
   {
-    "id":"fiendishBlessing",
     "name":"Fiendish Blessing",
     "exampleMonster":"Cambion",
     "crEffect":"Apply the monster's Charisma modifier to its actual AC."
   },
   {
-    "id":"flyby",
     "name":"Flyby",
     "exampleMonster":"Peryton"
   },
   {
-    "id":"frightfulPresence",
     "name":"Frightful Presence",
     "exampleMonster":"Ancient black dragon",
     "crEffect":"Increase the monster's effective hit points by 25% if the monster is meant to face characters of 10th level or lower. <u>Almost identical to <b>Horrifying Visage</b>. (range 120ft instead of 60ft)</u>"
   },
   {
-    "id":"grappler",
     "name":"Grappler",
     "exampleMonster":"Mimic"
   },
   {
-    "id":"holdBreath",
     "name":"Hold Breath",
     "exampleMonster":"Lizardfolk"
   },
   {
-    "id":"horrifyingVisage",
     "name":"Horrifying Visage",
     "exampleMonster":"Banshee",
     "crEffect":"Increase the monster's effective hit points by 25% if the monster is meant to face characters of 10th level or lower. <u>Almost identical to <b>Frightful Presence</b>. (range 60ft instead of 120ft)</u>"
   },
   {
-    "id":"illumination",
     "name":"Illumination",
     "exampleMonster":"Flameskull"
   },
   {
-    "id":"illusoryAppearance",
     "name":"Illusory Appearance",
     "exampleMonster":"Green hag"
   },
   {
-    "id":"immutableForm",
     "name":"Immutable Form",
     "exampleMonster":"Iron golem"
   },
   {
-    "id":"incorporealMovement",
     "name":"Incorporeal Movement",
     "exampleMonster":"Ghost"
   },
   {
-    "id":"innateSpellcasting",
     "name":"Innate Spellcasting",
     "exampleMonster":"Djinni",
     "crEffect":"See step 13 under \"Creating a Monster Stat Block.\""
   },
   {
-    "id":"inscrutable",
     "name":"Inscrutable",
     "exampleMonster":"Androsphinx"
   },
   {
-    "id":"invisibility",
     "name":"Invisibility",
     "exampleMonster":"Imp"
   },
   {
-    "id":"keenSenses",
     "name":"Keen Senses",
     "exampleMonster":"Hell hound"
   },
   {
-    "id":"labyrinthineRecall",
     "name":"Labyrinthine Recall",
     "exampleMonster":"Minotaur"
   },
   {
-    "id":"leadership",
     "name":"Leadership",
     "exampleMonster":"Hobgoblin captain"
   },
   {
-    "id":"legendaryResistance",
     "name":"Legendary Resistance",
     "exampleMonster":"Ancient black dragon",
     "crEffect":"Each per-day use of this trait increases the monster's effective hit points based on the expected challenge rating: 1-4, 10 hp; 5-10, 20 hp; 11 or higher, 30 hp."
   },
   {
-    "id":"lifeDrain",
     "name":"Life Drain",
     "exampleMonster":"Wight"
   },
   {
-    "id":"lightSensitivity",
     "name":"Light Sensitivity",
     "exampleMonster":"Shadow demon"
   },
   {
-    "id":"magicResistance",
     "name":"Magic Resistance",
     "exampleMonster":"Balor",
     "crEffect":"Increase the monster's effective AC by 2."
   },
   {
-    "id":"magicWeapons",
     "name":"Magic Weapons",
     "exampleMonster":"Balor"
   },
   {
-    "id":"martialAdvantage",
     "name":"Martial Advantage",
     "exampleMonster":"Hobgoblin",
     "crEffect":"Increase the effective damage of one attack per round by the amount gained from this trait."
   },
   {
-    "id":"mimicry",
     "name":"Mimicry",
     "exampleMonster":"Kenku"
   },
   {
-    "id":"nimbleEscape",
     "name":"Nimble Escape",
     "exampleMonster":"Goblin",
     "crEffect":"Increase the monster's effective AC and effective attack bonus by 4 (assuming the monster hides <i>every</i> round)"
   },
   {
-    "id":"otherworldlyPerception",
     "name":"Otherworldly Perception",
     "exampleMonster":"Kuo-toa"
   },
   {
-    "id":"packTactics",
     "name":"Pack Tactics",
     "exampleMonster":"Kobold",
     "crEffect":"Increase the monster's effective attack bonus by 1."
   },
   {
-    "id":"parry",
     "name":"Parry",
     "exampleMonster":"Hobgoblin warlord",
     "crEffect":"Increase the monster's effective AC by 1."
   },
   {
-    "id":"possession",
     "name":"Possession",
     "exampleMonster":"Ghost",
     "crEffect":"Double the monster's effective hit points."
   },
   {
-    "id":"pounce",
     "name":"Pounce",
     "exampleMonster":"Tiger",
     "crEffect":"Increase the monster's effective damage for 1 round by the amount it deals with the bonus action gained from this trait."
   },
   {
-    "id":"psychicDefense",
     "name":"Psychic Defense",
     "exampleMonster":"Githzerai monk",
     "crEffect":"Apply the monster's Wisdom modifier to its actual AC if the monster isn't wearing armor or wielding a shield."
   },
   {
-    "id":"rampage",
     "name":"Rampage",
     "exampleMonster":"Gnoll",
     "crEffect":"Increase the monster's effective per-round damage by 2."

@@ -6,6 +6,12 @@ function LoadData(){
     jsonData = data;
 
     $.each(jsonData, function(){
+      // Create the ID from the name, ensuring it follows naming conventions of variables and other IDs.
+      var optionID = this.name;
+      optionID = optionID.replace(/\s+/g,'');
+      optionID = optionID.charAt(0).toLowerCase() + optionID.slice(1);
+      this.id = optionID
+
       $("<option/>", {
         "value": this.id,
         "text": this.name
@@ -23,9 +29,9 @@ function SetupSelectOptionEffects(){
   var traitDescriptionText = $("#traitDescriptionText");
 
   traitsSelect.on("change", function() {
-    var exampleMonster = "Vortigaunt"
-    var crEffect = "None."
-    var traitDescription = "None."
+    var exampleMonster = "";
+    var crEffect = "";
+    var traitDescription = "";
     var valueSelected = this.value;
 
     var matchingJsonObject = $.grep(jsonData, function(obj){return obj.id == valueSelected;})[0];
