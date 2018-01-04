@@ -268,5 +268,148 @@
     "name":"Rampage",
     "exampleMonster":"Gnoll",
     "crEffect":"Increase the monster's effective per-round damage by 2."
+  },
+  {
+    "name":"Reactive",
+    "exampleMonster":"Marilith"
+  },
+  {
+    "name":"Read Thoughts",
+    "exampleMonster":"Doppelganger"
+  },
+  {
+    "name":"Reckless",
+    "exampleMonster":"Minotaur"
+  },
+  {
+    "name":"Redirect Attack",
+    "exampleMonster":"Goblin boss"
+  },
+  {
+    "name":"Reel",
+    "exampleMonster":"Roper"
+  },
+  {
+    "name":"Regeneration",
+    "exampleMonster":"Troll",
+    "crEffect":"Increase the monster's effective hit points by 3 x the number of hit points the monster regenerates each round."
+  },
+  {
+    "name":"Rejuvnation",
+    "exampleMonster":"Lich"
+  },
+  {
+    "name":"Relentless",
+    "exampleMonster":"Wereboar",
+    "crEffect":"Increase the monster's effective hit points based on the expected challenge rating: 1-4, 7 hp; 5-10, 14 hp; 11-16, 21 hp; 17 or higher, 28 hp."
+  },
+  {
+    "name":"Shadow Stealth",
+    "exampleMonster":"Shadow demon",
+    "crEffect":"Increase the monster's effective AC by 4."
+  },
+  {
+    "name":"Shapechanger",
+    "exampleMonster":"Wererat"
+  },
+  {
+    "name":"Siege Monster",
+    "exampleMonster":"Earth elemental"
+  },
+  {
+    "name":"Slippery",
+    "exampleMonster":"Kuo-toa"
+  },
+  {
+    "name":"Spellcasting",
+    "exampleMonster":"Lich",
+    "crEffect":"See step 13 under \"Creating a Monster Stat Block.\""
+  },
+  {
+    "name":"Spider Climb",
+    "exampleMonster":"Ettercap"
+  },
+  {
+    "name":"Standing Leap",
+    "exampleMonster":"Bullywug"
+  },
+  {
+    "name":"Steadfast",
+    "exampleMonster":"Bearded devil"
+  },
+  {
+    "name":"Stench",
+    "exampleMonster":"Troglodyte",
+    "crEffect":"Increase the monster's effective AC by 1."
+  },
+  {
+    "name":"Sunlight Sensitivity",
+    "exampleMonster":"Kobold"
+  },
+  {
+    "name":"Superior Invisibility",
+    "exampleMonster":"Faerie dragon",
+    "crEffect":"Increase the monster's effective AC by 2."
+  },
+  {
+    "name":"Sure-Footed",
+    "exampleMonster":"Dao"
+  },
+  {
+    "name":"Surprise Attack",
+    "exampleMonster":"Bugbear",
+    "crEffect":"Increase the monster's effective damage for 1 round by the amount noted in the trait."
+  },
+  {
+    "name":"Swallow",
+    "exampleMonster":"Behir",
+    "crEffect":"Assume the monster swallows one creature and deals 2 rounds of acid damage to it."
+  },
+  {
+    "name":"Teleport",
+    "exampleMonster":"Balor",
+  },
+  {
+    "name":"Terrain Camouflage",
+    "exampleMonster":"Bullywug"
+  },
+  {
+    "name":"Tunneler",
+    "exampleMonster":"Umber hulk"
+  },
+  {
+    "name":"Turn Immunity",
+    "exampleMonster":"Revenant"
+  },
+  {
+    "name":"Turn Resistance",
+    "exampleMonster":"Lich"
+  },
+  {
+    "name":"Two Heads",
+    "exampleMonster":"Ettin"
+  },
+  {
+    "name":"Undead Fortitude",
+    "exampleMonster":"Zombie",
+    "crEffect":"Increase the monster's effective hit points based on the expected challenge rating: 1-4, 7 hp; 5-10, 14hp; 11-16, 21 hp; 17 or higher, 28 hp."
+  },
+  {
+    "name":"Web",
+    "exampleMonster":"Giant spider",
+    "crEffect":"Increase the monster's effective AC by 1."
+  },
+  {
+    "name":"Web Sense",
+    "exampleMonster":"Giant spider"
+  },
+  {
+    "name":"Web Walker",
+    "exampleMonster":"Giant spider"
+  },
+  {
+    "name":"Wounded Fury",
+    "exampleMonster":"Quaggoth",
+    "crEffect":"Increase the monster's damage for 1 round by the amount noted in the trait."
   }
 ]
