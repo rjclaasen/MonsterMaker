@@ -53,61 +53,73 @@
     "name":"Breath Weapon",
     "exampleMonster":"Ancient black dragon",
     "crEffect":"For the purpose of determining effective damage output, assume the breath weapon hits two targets, and that each target fails its saving throw.",
-    "traitDescription":"<b>(Recharge 5-6).</b> The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one."
+    "traitDescription":"<b>Action (Recharge 5-6).</b> The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one."
   },
   {
     "name":"Brute",
     "exampleMonster":"Bugbear",
-    "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait."
+    "crEffect":"Increase the monster's effective per-round damage by the amount noted in the trait.",
+    "traitDescription":"A melee weapon deals one extra die of its damage when the bugbear hits with it."
   },
   {
     "name":"Chameleon Skin",
-    "exampleMonster":"Troglodyte"
+    "exampleMonster":"Troglodyte",
+    "traitDescription":"The troglodyte has advantage on Dexterity (Stealth) checks made to hide."
   },
   {
     "name":"Change Shape",
-    "exampleMonster":"Ancient brass dragon"
+    "exampleMonster":"Ancient brass dragon",
+    "traitDescription":"<b>Action.</b> The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice). \nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form."
   },
   {
     "name":"Charge",
     "exampleMonster":"Centaur",
-    "crEffect":"Increase the monster's damage on one attack by the amount noted in the trait."
+    "crEffect":"Increase the monster's damage on one attack by the amount noted in the trait.",
+    "traitDescription":"If the centaur moves at least 30 feet straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage."
   },
   {
     "name":"Charm",
-    "exampleMonster":"Vampire"
+    "exampleMonster":"Vampire",
+    "traitDescription":"<b>Action.</b> The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and is a willing target for the vampire's bite attack. \nEach time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
   },
   {
     "name":"Constrict",
     "exampleMonster":"Constrictor snake",
-    "crEffect":"Increase the monster's effective AC by 1."
+    "crEffect":"Increase the monster's effective AC by 1.",
+    "traitDescription":"<b>Action.</b> <i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one creature. <i>Hit:</i> 6 (1d8 + 2) bludgeoning damage, and the target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."
   },
   {
     "name":"Damage Absorption",
-    "exampleMonster":"Flesh golem"
+    "exampleMonster":"Flesh golem",
+    "traitDescription":"<b>Lightning Absorption.</b> Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt."
   },
   {
     "name":"Damage Transfer",
-    "exampleMonster":"Darkmantle",
-    "crEffect":"Double the monster's effective hit points. Add one-third of the monster's hit points to its per-round damage."
+    "exampleMonster":"Cloaker",
+    "crEffect":"Double the monster's effective hit points. Add one-third of the monster's hit points to its per-round damage.",
+    "traitDescription":"While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down), and that creature takes the other half."
   },
   {
     "name":"Death Burst",
     "exampleMonster":"Magmin",
-    "crEffect":"Increase the monster's effective damage output for 1 round by the amount noted in the trait, and assume it affects two creatures."
+    "crEffect":"Increase the monster's effective damage output for 1 round by the amount noted in the trait, and assume it affects two creatures.",
+    "traitDescription":"When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited."
   },
   {
     "name":"Devil Sight",
-    "exampleMonster":"Barbed Devil"
+    "exampleMonster":"Barbed Devil",
+    "traitDescription":"Magical darkness doesn't impede the devil's darkvision."
   },
   {
     "name":"Dive",
     "exampleMonster":"Aarakocra",
-    "crEffect":"Increase the monster's effective damage on one attack by the amount noted in the trait."
+    "crEffect":"Increase the monster's effective damage on one attack by the amount noted in the trait.",
+    "traitDescription":"<b>Dive Attack.</b> If the aarakocra is flying and dives at least 30 feet straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target."
   },
   {
     "name":"Echolocation",
-    "exampleMonster":"Hook horror"
+    "exampleMonster":"Hook horror",
+    "traitDescription":"The hook horror can't use its blindsight while deafened."
   },
   {
     "name":"Elemental Body",
