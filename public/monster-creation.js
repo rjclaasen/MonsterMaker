@@ -306,11 +306,20 @@ function setupChallengeRatings() {
 
   var oldCR = cr;
 
+  ShowHideCRRoundingTooltip = function() {
+    if((ocr + dcr) / 2 != cr) {
+      $("#crTextBoxTooltip_basics").show();
+    } else {
+      $("#crTextBoxTooltip_basics").hide();
+    }
+  };
+  ShowHideCRRoundingTooltip();
+
   // On CR textbox change.
   crTextBox.on('input', function() {
     cr = parseInt($(this).val());
     if(isNaN(cr)) {
-      cr = (ocr + dcr) / 2;
+      cr = Math.floor((ocr + dcr) / 2);
       docr = ocr - cr;
       ddcr = dcr - cr;
       return;
@@ -320,6 +329,8 @@ function setupChallengeRatings() {
     ocrTextBox.val(ocr);
     dcr = cr + ddcr;
     dcrTextBox.val(dcr);
+
+    ShowHideCRRoundingTooltip();
 
     setProficiencyBonusFromCR(cr);
     setACFromDefCR(dcr);
@@ -338,10 +349,12 @@ function setupChallengeRatings() {
       return;
     }
 
-    cr = (ocr + dcr) / 2;
+    cr = Math.floor((ocr + dcr) / 2);
     docr = ocr - cr;
     ddcr = dcr - cr;
     crTextBox.val(cr);
+
+    ShowHideCRRoundingTooltip();
 
     setProficiencyBonusFromCR(cr);
     setACFromDefCR(dcr);
@@ -355,16 +368,17 @@ function setupChallengeRatings() {
   // On Defensive CR textbox change.
   dcrTextBox.on('input', function() {
     dcr = parseInt($(this).val());
-    //console.log(isNaN(dcr));
     if(isNaN(dcr)) {
       dcr = 0;
       return;
     }
 
-    cr = (ocr + dcr) / 2;
+    cr = Math.floor((ocr + dcr) / 2);
     docr = ocr - cr;
     ddcr = dcr - cr;
     crTextBox.val(cr);
+
+    ShowHideCRRoundingTooltip();
 
     setProficiencyBonusFromCR(cr);
     setACFromDefCR(dcr);

@@ -36,7 +36,7 @@
         <a class="nav-link" data-toggle="tab" href="#traits" role="tab" aria-controls="traits">Traits</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#advanced" role="tab" aria-controls="advanced">Advanced</a>
+        <a class="nav-link" data-toggle="tab" href="#details" role="tab" aria-controls="details">Details</a>
       </li>
     </ul>
   </div>
@@ -68,29 +68,30 @@
               </select>
             </div>
             <div class="col-sm-3">
-              Number of weapon damage dice: <span id="numDiceFromSizeText">1</span><span data-toggle="tooltip" title="Some attacks can use more or less dice.">*</span>. Hit die size: <span id="hitDieSize">d8</span>.
+              Number of weapon damage dice: <span id="numDiceFromSizeText">1</span>. Hit die size: <span id="hitDieSize">d8</span>.
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2" for="ocrTextBox">Offensive Rating:<span id="ocrIntegerTooltip" data-toggle="tooltip" title="Non-integer values might not have accurate attack, damage, and save values.">*</span></label>
+            <label class="col-sm-2" for="ocrTextBox">Offensive Rating:</label>
             <div class="col-sm-2">
               <input id="ocrTextBox" class="form-control form-control-sm" type="number" name="offensiveRating" min=0 max=30 value=1 step="any">
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2" for="dcrTextBox">Defensive Rating:<span id="dcrIntegerTooltip" data-toggle="tooltip" title="Non-integer values might not have an accurate AC and hit points.">*</span></label>
+            <label class="col-sm-2" for="dcrTextBox">Defensive Rating:</label>
             <div class="col-sm-2">
               <input id="dcrTextBox" class="form-control form-control-sm" type="number" name="defensiveRating" min=0 max=30 value=1 step="any">
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2" for="crTextBox">Challenge Rating:<span id="crIntegerTooltip" data-toggle="tooltip" title="Non-integer values might not have an accurate proficiency bonus.">*</span></label>
+            <label class="col-sm-2" for="crTextBox">Challenge Rating:</label>
             <div class="col-sm-2">
               <input id="crTextBox" class="form-control form-control-sm" type=number name="challengeRating" min=0 max=30 value=1 step="any">
             </div>
+            <span id="crTextBoxTooltip_basics" data-toggle="tooltip" title="Rounded down">*</span>
           </div>
 
           <div class="form-group row">
@@ -170,7 +171,7 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2" for="traitDescriptionText">Trait description:</label>
+            <label class="col-sm-2" for="traitDescriptionText">Trait description example:</label>
             <div class="col-sm-5">
               <textarea id="traitDescriptionText" class="form-control form-control-sm" name="traitDescription" rows="6" readonly>As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.</textarea>
             </div>
@@ -178,8 +179,8 @@
         </div>
       </div>
 
-      <!-- TAB: Advanced -->
-      <div role="tabpanel" class="tab-pane" id="advanced">
+      <!-- TAB: Details -->
+      <div role="tabpanel" class="tab-pane" id="details">
         <div class="text-center container">
           <div class="form-group row">
             <label class="col-sm-2" for="hitdiceText">Hit Dice:</label>
