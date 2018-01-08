@@ -41,16 +41,16 @@ function setupSizeChoiceEffects() {
 }
 
 function setProficiencyBonusFromCR(cr) {
-  var profBonusTextBox = $("#proficiencyText");
+  var profBonusTextBox_basics = $("#proficiencyText_basics");
   var profText = "+"
 
   var prof = Math.floor((cr - 1) / 4) + 2;
   profText += prof;
-  profBonusTextBox.val(profText);
+  profBonusTextBox_basics.val(profText);
 }
 
 function setACFromDefCR(dcr) {
-  var acTextBox = $("#armorclassText");
+  var acTextBox_basics = $("#armorclassText_basics");
   var ac = 13;
 
   if(dcr <= 3) {
@@ -69,11 +69,11 @@ function setACFromDefCR(dcr) {
     ac = 19; // 17 <= dcr
   }
 
-  acTextBox.val(ac);
+  acTextBox_basics.val(ac);
 }
 
 function setHPFromDefCR(dcr) {
-  var hpTextBox = $("#hitpointsText");
+  var hpTextBox_basics = $("#hitpointsText_basics");
   var hp = "71-85";
 
   if(dcr == 0) {
@@ -94,11 +94,11 @@ function setHPFromDefCR(dcr) {
     hp = minHP + "-" + maxHP;
   }
 
-  hpTextBox.val(hp);
+  hpTextBox_basics.val(hp);
 }
 
 function setAtkBonusFromOffCR(ocr) {
-  var atkBonusTextBox = $("#atkText");
+  var atkBonusTextBox_basics = $("#atkText_basics");
   var atkText = "+"
 
   if(ocr <= 2) {
@@ -127,11 +127,11 @@ function setAtkBonusFromOffCR(ocr) {
     atkText += 14;
   }
 
-  atkBonusTextBox.val(atkText);
+  atkBonusTextBox_basics.val(atkText);
 }
 
 function setDmgPerRoundFromOffCR(ocr) {
-  var dmgTextBox = $("#dmgText");
+  var dmgTextBox_basics = $("#dmgText_basics");
   var dmg = "9-14";
 
   if(ocr == 0) {
@@ -152,11 +152,11 @@ function setDmgPerRoundFromOffCR(ocr) {
     dmg = minDmg + "-" + maxDmg;
   }
 
-  dmgTextBox.val(dmg);
+  dmgTextBox_basics.val(dmg);
 }
 
 function setSaveDCFromOffCR(ocr) {
-  var saveDCTextBox = $("#dcText");
+  var saveDCTextBox_basics = $("#dcText_basics");
   var saveDC = 13
 
   if(ocr <= 3) {
@@ -183,11 +183,11 @@ function setSaveDCFromOffCR(ocr) {
     saveDC = 23;
   }
 
-  saveDCTextBox.val(saveDC);
+  saveDCTextBox_basics.val(saveDC);
 }
 
 function setXPFromCR(cr) {
-  var xpTextBox = $("#xpReward");
+  var xpTextBox_basics = $("#xpReward_basics");
   var xp = 200;
 
   if(cr == 0) {
@@ -289,13 +289,13 @@ function setXPFromCR(cr) {
   }
 
   xp = xp.toLocaleString();
-  xpTextBox.text(xp);
+  xpTextBox_basics.text(xp);
 }
 
 function setupChallengeRatings() {
-  var crTextBox = $("#crTextBox");
-  var ocrTextBox = $("#ocrTextBox");
-  var dcrTextBox = $("#dcrTextBox");
+  var crTextBox = $("#crTextBox_basics");
+  var ocrTextBox = $("#ocrTextBox_basics");
+  var dcrTextBox = $("#dcrTextBox_basics");
 
   var ocr = parseInt(ocrTextBox.val());
   var dcr = parseInt(dcrTextBox.val());
