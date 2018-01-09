@@ -48,10 +48,7 @@ function CRtoHP(cr) {
     maxHP = 355 + (45 * (cr - 19));
   }
 
-  return {
-    minHP: minHP,
-    maxHP: maxHP
-  };
+  return [minHP, maxHP];
 }
 
 function CRtoAtk(cr) {
@@ -107,10 +104,7 @@ function CRtoDPR(cr) {
     maxDpr = 122 + (18 * (cr - 19));
   }
 
-  return {
-    minDpr: minDpr,
-    maxDpr: maxDpr
-  };
+  return [minDpr, maxDpr];
 }
 
 function CRtoSaveDC(cr) {
@@ -208,4 +202,8 @@ function CRtoXP(cr) {
         return "Not a valid CR for XP";
     }
   }
+}
+
+function RangeToString(range) {
+  return range[0] + "-" + range[1];
 }

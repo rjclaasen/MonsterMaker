@@ -56,13 +56,10 @@ function setACFromDefCR(dcr) {
 
 function setHPFromDefCR(dcr) {
   var hpTextBox_basics = $("#hitpointsText_basics");
-  var hpObj = CRtoHP(dcr);
-  var minHP = hpObj.minHP;
-  var maxHP = hpObj.maxHP;
+  var hpRange = CRtoHP(dcr);
+  var hpString = RangeToString(hpRange);
 
-  var hp = minHP + "-" + maxHP;
-
-  hpTextBox_basics.val(hp);
+  hpTextBox_basics.val(hpString);
 }
 
 function setAtkBonusFromOffCR(ocr) {
@@ -74,13 +71,10 @@ function setAtkBonusFromOffCR(ocr) {
 
 function setDmgPerRoundFromOffCR(ocr) {
   var dmgTextBox_basics = $("#dmgText_basics");
-  var dprObj = CRtoDPR(ocr);
-  var minDpr = dprObj.minDpr;
-  var maxDpr = dprObj.maxDpr;
+  var dprRange = CRtoDPR(ocr);
+  var dprString = RangeToString(dprRange);
 
-  var dpr = minDpr + "-" + maxDpr;
-
-  dmgTextBox_basics.val(dpr);
+  dmgTextBox_basics.val(dprString);
 }
 
 function setSaveDCFromOffCR(ocr) {
