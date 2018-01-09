@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="index.css"> <!-- index.css here -->
 
   <!-- Custom Javascript -->
+  <script src='monster-creation_generic.js'></script>
   <script src="monster-creation_basics.js"></script>
   <script src="monster-creation_details.js"></script>
   <script src="navigation.js"></script>
@@ -81,7 +82,7 @@
           <div class="form-group row">
             <label class="col-sm-2" for="proficiencyText">Proficiency Bonus:</label>
             <div class="col-sm-2">
-              <input id="proficiencyText_basics" class="form-control form-control-sm" type="text" name="proficiencyBonus" value="+2" readonly> <!-- Dependent on CR, see DMG -->
+              <input id="proficiencyText_basics" class="form-control form-control-sm" type="text" name="proficiencyBonus" value="+2" readonly>
             </div>
           </div>
 
@@ -214,7 +215,7 @@
           <div class="form-group row">
             <label class="col-sm-2" for="proficiencyText">Proficiency Bonus:</label>
             <div class="col-sm-2">
-              <input id="proficiencyText_details" class="form-control form-control-sm" type="text" name="proficiencyBonus" value="+2" data-toggle="tooltip" title="It is advised to not change this value."> <!-- Dependent on CR, see DMG -->
+              <input id="proficiencyText_details" class="form-control form-control-sm" type="text" name="proficiencyBonus" value="+2" readonly> <!-- Dependent on CR, see DMG -->
             </div>
           </div>
 
