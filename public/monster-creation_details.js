@@ -2,6 +2,7 @@ var offensiveCR;
 var defensiveCR;
 var averageCR;
 var suggestedAC;
+var suggestedAtk;
 var minHP;
 var maxHP;
 
@@ -26,6 +27,7 @@ function SetupLoading() {
       defensiveCR = parseInt($('#dcrTextBox_details').val());
       averageCR = parseInt($('#crTextBox_details').val());
       suggestedAC = parseInt($('#armorclassText_details').val());
+      suggestedAtk = parseInt($('#atkText_details').val());
       var hpRange = $('#hitpointsText_details').val().split('-');
       minHP = parseInt(hpRange[0]);
       maxHP = parseInt(hpRange[1]);
@@ -50,13 +52,31 @@ function SetupHP() {
     var suggestedHpRange = CRtoHP(defensiveCR + dcrAdjustment);
     $('#hitpointsText_details').val(RangeToString(suggestedHpRange));
   });
+}
 
-  $('#hitpointsText_details').on('input', function() {
-    console.log('boop');
+function SetupDPR() {
+  var atkTextBox = $('#atkText_details');
+  var dprTooltip = $('#dprSuggestion');
+  dprTooltip.hide();
+
+  atkTextBox.on('input', function() {
+    var userAtk = parseInt(atkTextBox.val());
+    if (!isNaN(userAtk)) {
+      var ocrAdjustment = Math.floor((userAtk - suggestedAtk) / 2);
+      if(ocrAdjustment < 0) {
+        dprTooltip.show();
+      } else {
+        dprTooltip.hide();
+      }
+
+      var suggestedDprRange = CRtoDPR(offensiveCR + ocrAdjustment);
+      $('#dmgText_details').val(RangeToString(suggestedDprRange));
+    }
   });
 }
 
 $(document).ready(function() {
   SetupLoading();
   SetupHP();
+  SetupDPR();
 });
