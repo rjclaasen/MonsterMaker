@@ -54,6 +54,20 @@ function SetupHP() {
   });
 }
 
+function SetupAddPlusToAttack() {
+  var atkTextBox = $('#atkText_details');
+
+  atkTextBox.on('focusout', function() {
+    if(isNaN(atkTextBox.val())) {
+      return; // If input can't be parsed, do nothing.
+    }
+    var firstChar = atkTextBox.val()[0];
+    if(firstChar != '+' && firstChar != '-') {
+      atkTextBox.val("+" + atkTextBox.val());
+    }
+  });
+}
+
 function SetupDPR() {
   var atkTextBox = $('#atkText_details');
   var dprTooltip = $('#dprSuggestion');
@@ -78,5 +92,6 @@ function SetupDPR() {
 $(document).ready(function() {
   SetupLoading();
   SetupHP();
+  SetupAddPlusToAttack();
   SetupDPR();
 });
