@@ -62,8 +62,8 @@ function SetupDPR() {
   atkTextBox.on('input', function() {
     var userAtk = parseInt(atkTextBox.val());
     if (!isNaN(userAtk)) {
-      var ocrAdjustment = Math.floor((userAtk - suggestedAtk) / 2);
-      if(ocrAdjustment < 0) {
+      var ocrAdjustment = -Math.floor((userAtk - suggestedAtk) / 2);
+      if(ocrAdjustment > 0) {
         dprTooltip.show();
       } else {
         dprTooltip.hide();
