@@ -302,23 +302,23 @@
       </div>
 
       <!-- TAB: Final -->
-      <div role="tabpanel" class="tab-pane" id="final">
+      <div role="tabpanel" class="tab-pane finalPage container" id="final">
         <div class="statDiv" id="final_nameAndSubtitle">
           <div id="final_name">Vortigaunt</div>
           <div id="final_sizetypealignment">Medium aberration, neutral</div>
         </div>
         <div class="stat statDiv" id="final_basicStats">
           <div><span class="boldAttributeName">Armor Class</span> <span id="final_ac">10</span></div>
-          <div><span class="boldAttributeName">Hit Points</span> <span id="final_hp">71</span></div>
+          <div><span class="boldAttributeName">Hit Points</span> <span id="final_hp">71 (13d8 + 13)</span></div>
           <div><span class="boldAttributeName">Speed</span> <span id="final_speed">30 ft.</span></div>
         </div>
         <div class="stat statDiv" id="final_attributes">
-          <table>
+          <table class="attributesTable">
             <tr>
               <th>STR</th> <th>DEX</th> <th>CON</th> <th>INT</th> <th>WIS</th> <th>CHA</th>
             </tr>
             <tr>
-              <td id="final_str">10</td> <td id="final_dex">11</td> <td id="final_con">12</td> <td id="final_int">13</td> <td id="final_wis">14</td> <td id="final_cha">15</td>
+              <td id="final_str">10 (+0)</td> <td id="final_dex">11 (+0)</td> <td id="final_con">12 (+1)</td> <td id="final_int">13 (+1)</td> <td id="final_wis">14 (+2)</td> <td id="final_cha">15 (+2)</td>
             </tr>
           </table>
         </div>
@@ -329,24 +329,25 @@
           <div><span class="boldAttributeName">Condition Immunities</span> <span id="final_conditionImmunities">charmed</span></div>
           <div><span class="boldAttributeName">Senses</span> <span id="final_senses">darkvision 60 ft., passive Perception 12</span></div>
           <div><span class="boldAttributeName">Languages</span> <span id="final_languages">Vortigaunt</span></div>
-          <div><span class="boldAttributeName">Challenge</span> <span id="final_challenge">1</span></div>
+          <div><span class="boldAttributeName">Challenge</span> <span id="final_challenge">1 (200 xp)</span></div>
         </div>
         <div id="final_traits">
           <div class="ability">
-            <span class="abilityTitle" id="trait1_title">Trait One. </span>
-            <span class="abilityText">Lorem ipsum dolor etc.</span>
+            <span class="abilityTitle" id="trait1_title">Aggressive.</span> <span class="abilityText">As a bonus action, the vortigaunt can move up to its speed toward a hostile creature it can see.</span>
           </div>
         </div>
         <div class="actionTitle">Actions</div>
         <div id="final_actions">
           <div class="ability">
-            <span class="abilityTitle" id="action1_title">Action One. </span>
-            <span class="attackType" id="action1_attackType">Melee Weapon Attack: </span>
-            <span id="action1_attackBonus">+2 to hit,</span> <span id="range">reach 5 ft.,</span> <span id="targets">one target.</span> <span class="hitText">Hit:</span> <span id="action1_damage">3 (1d6) slashing damage.</span>
+            <span class="abilityTitle" id="action1_title">Claw.</span> <span class="attackType" id="action1_attackType">Melee Weapon Attack:</span> <span id="action1_attackBonus">+2 to hit,</span> <span id="range">reach 5 ft.,</span> <span id="targets">one target.</span> <span class="hitText">Hit:</span> <span id="action1_damage">3 (1d6) slashing damage.</span>
           </div>
         </div>
         <div class="actionTitle">Legendary Actions</div>
+        <div class="legendaryactionsDescription">The vortigaunt can take 3 legendary actions, using the Attack option below. It can take only one legendary action at a time and only at the end of another creature's turn. The vortigaunt regains spent legendary actions at the start of its turn.</div>
         <div id="legendary_actions">
+          <div class="ability">
+            <span class="abilityTitle" id="legendaryaction1_title">Claw.</span> <span id="legendaryaction1_description">The vortigaunt makes a claw attack.</span>
+          </div>
         </div>
       </div>
     </div>

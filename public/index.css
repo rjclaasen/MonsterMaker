@@ -2,10 +2,15 @@ body {
   font-family: monospace;
   background-color: lightgreen;
 }
+.finalPage {
+  font-family: helvetica;
+}
 .statDiv {
   border-bottom-style: solid;
   border-bottom-color: crimson;
   border-bottom-width: 3px;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
 }
 .actionTitle {
   border-bottom-style: solid;
@@ -37,4 +42,15 @@ body {
 }
 .hitText {
   font-style: italic;
+}
+.attributesTable {
+  width: 100%;
+  text-align: center;
+}
+.ability {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.legendaryactionsDescription {
+  padding-top: 4px;
 }
