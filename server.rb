@@ -7,6 +7,8 @@ WEB_ROOT = "./public"
 
 CONTENT_TYPE_MAPPING = {
   "html" => "text/html",
+  "css" => "text/css",
+  "js" => "text/javascript",
   "txt" => "text/plain",
   "png" => "image/png",
   "jpg" => "image/jpeg",
