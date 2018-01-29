@@ -40,6 +40,9 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#details" role="tab" aria-controls="details">Details</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#final" role="tab" aria-controls="details">Final</a>
+      </li>
     </ul>
   </div>
 
@@ -295,6 +298,55 @@
               <input id="chaText" class="form-control form-control-sm" type="number" name="charisma" min=0 max=30 value=10>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- TAB: Final -->
+      <div role="tabpanel" class="tab-pane" id="final">
+        <div class="statDiv" id="final_nameAndSubtitle">
+          <div id="final_name">Vortigaunt</div>
+          <div id="final_sizetypealignment">Medium aberration, neutral</div>
+        </div>
+        <div class="stat statDiv" id="final_basicStats">
+          <div><span class="boldAttributeName">Armor Class</span> <span id="final_ac">10</span></div>
+          <div><span class="boldAttributeName">Hit Points</span> <span id="final_hp">71</span></div>
+          <div><span class="boldAttributeName">Speed</span> <span id="final_speed">30 ft.</span></div>
+        </div>
+        <div class="stat statDiv" id="final_attributes">
+          <table>
+            <tr>
+              <th>STR</th> <th>DEX</th> <th>CON</th> <th>INT</th> <th>WIS</th> <th>CHA</th>
+            </tr>
+            <tr>
+              <td id="final_str">10</td> <td id="final_dex">11</td> <td id="final_con">12</td> <td id="final_int">13</td> <td id="final_wis">14</td> <td id="final_cha">15</td>
+            </tr>
+          </table>
+        </div>
+        <div class="stat statDiv" id="final_otherAttributes">
+          <div><span class="boldAttributeName">Saving Throws</span> <span id="final_savingThrows">Str +2, Wis +4</span></div>
+          <div><span class="boldAttributeName">Skills</span> <span id="final_skills">Arcana +3</span></div>
+          <div><span class="boldAttributeName">Damage Immunities</span> <span id="final_damageImmunities">psychic</span></div>
+          <div><span class="boldAttributeName">Condition Immunities</span> <span id="final_conditionImmunities">charmed</span></div>
+          <div><span class="boldAttributeName">Senses</span> <span id="final_senses">darkvision 60 ft., passive Perception 12</span></div>
+          <div><span class="boldAttributeName">Languages</span> <span id="final_languages">Vortigaunt</span></div>
+          <div><span class="boldAttributeName">Challenge</span> <span id="final_challenge">1</span></div>
+        </div>
+        <div id="final_traits">
+          <div class="ability">
+            <span class="abilityTitle" id="trait1_title">Trait One. </span>
+            <span class="abilityText">Lorem ipsum dolor etc.</span>
+          </div>
+        </div>
+        <div class="actionTitle">Actions</div>
+        <div id="final_actions">
+          <div class="ability">
+            <span class="abilityTitle" id="action1_title">Action One. </span>
+            <span class="attackType" id="action1_attackType">Melee Weapon Attack: </span>
+            <span id="action1_attackBonus">+2 to hit,</span> <span id="range">reach 5 ft.,</span> <span id="targets">one target.</span> <span class="hitText">Hit:</span> <span id="action1_damage">3 (1d6) slashing damage.</span>
+          </div>
+        </div>
+        <div class="actionTitle">Legendary Actions</div>
+        <div id="legendary_actions">
         </div>
       </div>
     </div>

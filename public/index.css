@@ -2,3 +2,39 @@ body {
   font-family: monospace;
   background-color: lightgreen;
 }
+.statDiv {
+  border-bottom-style: solid;
+  border-bottom-color: crimson;
+  border-bottom-width: 3px;
+}
+.actionTitle {
+  border-bottom-style: solid;
+  border-bottom-color: crimson;
+  border-bottom-width: 1px;
+}
+#final_name {
+  font-family: bookman;
+  font-size: 2em;
+  font-weight: bold;
+}
+#final_sizetypealignment {
+  font-style: italic;
+}
+.boldAttributeName {
+  font-weight: bold;
+}
+.actionTitle {
+  font-family: bookman;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.abilityTitle {
+  font-style: italic;
+  font-weight: bold;
+}
+.attackType {
+  font-style: italic;
+}
+.hitText {
+  font-style: italic;
+}
