@@ -41,7 +41,10 @@
         <a class="nav-link" data-toggle="tab" href="#details" role="tab" aria-controls="details">Details</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#final" role="tab" aria-controls="details">Final</a>
+        <a class="nav-link" data-toggle="tab" href="#optional" role="tab" aria-controls="optional">Optional</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#final" role="tab" aria-controls="final">Final</a>
       </li>
     </ul>
   </div>
@@ -273,29 +276,61 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-1" for="strText">Strength:</label>
-            <div class="col-sm-1">
-              <input id="strText" class="form-control form-control-sm" type="number" name="strength" min=0 max=30 value=10>
+            <table>
+              <tr>
+                <th></th><th>Strength</th><th>Dexterity</th><th>Constitution</th><th>Intelligence</th><th>Wisdom</th><th>Charisma</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th><input id="strText" class="form-control form-control-sm" type="number" name="strength" min=0 max=30 value=10></th>
+                <th><input id="dexText" class="form-control form-control-sm" type="number" name="dexterity" min=0 max=30 value=10></th>
+                <th><input id="conText" class="form-control form-control-sm" type="number" name="constitution" min=0 max=30 value=10></th>
+                <th><input id="intText" class="form-control form-control-sm" type="number" name="intelligence" min=0 max=30 value=10></th>
+                <th><input id="wisText" class="form-control form-control-sm" type="number" name="wisdom" min=0 max=30 value=10></th>
+                <th><input id="chaText" class="form-control form-control-sm" type="number" name="charisma" min=0 max=30 value=10></th>
+              </tr>
+              <tr>
+                <th>Saving Throw Proficiency</th>
+                <th><input id="strProf" type="checkbox" name="strengthProficiency"></th>
+                <th><input id="dexProf" type="checkbox" name="dexterityProficiency"></th>
+                <th><input id="conProf" type="checkbox" name="constitutionProficiency"></th>
+                <th><input id="intProf" type="checkbox" name="intelligenceProficiency"></th>
+                <th><input id="wisProf" type="checkbox" name="wisdomProficiency"></th>
+                <th><input id="chaProf" type="checkbox" name="charismaProficiency"></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: Optional -->
+      <div role="tabpanel" class="tab-pane" id="optional">
+        <div class="text-center container">
+          <div class="form-group row">
+            <label class="col-sm-1" for="typeText">Type:</label>
+            <div class="col-sm-2">
+              <input id="typeText" class="form-control form-control-sm" type="text" name="type" value="humanoid">
             </div>
-            <label class="col-sm-1" for="dexText">Dexterity:</label>
-            <div class="col-sm-1">
-              <input id="dexText" class="form-control form-control-sm" type="number" name="dexterity" min=0 max=30 value=10>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-1" for="alignmentText">Alignment:</label>
+            <div class="col-sm-2">
+              <input id="alignmentText" class="form-control form-control-sm" type="text" name="alignment" value="neutral">
             </div>
-            <label class="col-sm-1" for="conText">Constitution:</label>
-            <div class="col-sm-1">
-              <input id="conText" class="form-control form-control-sm" type="number" name="constitution" min=0 max=30 value=10>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-1" for="armorsourceText">Armor source:</label>
+            <div class="col-sm-2">
+              <input id="armorsourceText" class="form-control form-control-sm" type="text" name="armorSource" value="natural armor">
             </div>
-            <label class="col-sm-1" for="intText">Intelligence:</label>
-            <div class="col-sm-1">
-              <input id="intText" class="form-control form-control-sm" type="number" name="intelligence" min=0 max=30 value=10>
-            </div>
-            <label class="col-sm-1" for="wisText">Wisdom:</label>
-            <div class="col-sm-1">
-              <input id="wisText" class="form-control form-control-sm" type="number" name="wisdom" min=0 max=30 value=10>
-            </div>
-            <label class="col-sm-1" for="chaText">Charisma:</label>
-            <div class="col-sm-1">
-              <input id="chaText" class="form-control form-control-sm" type="number" name="charisma" min=0 max=30 value=10>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-1" for="speedText">Speed:</label>
+            <div class="col-sm-2">
+              <input id="speedText" class="form-control form-control-sm" type="text" name="speed" value="30 ft.">
             </div>
           </div>
         </div>
