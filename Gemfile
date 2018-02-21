@@ -59,6 +59,8 @@ group :test do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
+  # Use colors for test output in win32 console
+  gem 'win32console'
 end
 
 group :production do
