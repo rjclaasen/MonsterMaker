@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+vortigaunt:
+  name: Vortigaunt
+  user: michael
+  hitPoints: 1
+  damage: 1
+
+zergling:
+  name: Zergling
+  user: michael
+  hitPoints: 1
+  damage: 1
+
+abathur:
+  name: Abathur
+  user: michael
+
+aarakocra:
+  name: Aarakocra
+  user: michael
+
+<% 30.times do |n| %>
+monster_<%= n %>:
+  name: <%= Faker::Pokemon.name %>
+  user: michael
+<% end %>
