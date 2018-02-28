@@ -16,7 +16,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_match @user.monsters.count.to_s, response.body
     assert_select 'div.pagination'
     @user.monsters.paginate(page: 1).each do |monster|
-      assert_match monster.name, response.body
+      assert_match CGI.escapeHTML(monster.name), response.body # CGI.escapeHTML for special characters with a different representation in HTML, such as " => &quot;
     end
   end
 end
