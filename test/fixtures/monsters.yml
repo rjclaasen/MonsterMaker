@@ -6,8 +6,8 @@ vortigaunt:
   hitPoints: 1
   damage: 1
 
-zergling:
-  name: Zergling
+mimic:
+  name: Mimic
   user: michael
   hitPoints: 1
   damage: 1
