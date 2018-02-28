@@ -64,10 +64,10 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'gm-tools.herokuapp.com'
+  host = "gm-tools.herokuapp.com"
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :addresses            => "smtp.sendgrid.net",
+    :address            => "smtp.sendgrid.net",
     :port                 => "587",
     :authentication       => :plain,
     :user_name            => ENV.fetch("SENDGRID_USERNAME"),
