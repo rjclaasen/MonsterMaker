@@ -1,6 +1,6 @@
-# GM-Tools
+# Monster Maker
 
-This might become a collection of tools for gamemastering. Currently it only contains the Monster Creator.
+This is a website dedicated to the creation of Monsters in Dungeons and Dragons 5th edition.
 
 ## License
 
@@ -8,7 +8,7 @@ All source code is available under the GNU General Public License. See [LICENSE]
 
 ## Getting started
 
-To run gm-tools yourself, clone the repo and then install the needed gems:
+To run Monster Maker yourself, clone the repo and then install the needed gems:
 ```
 $ bundle install --without production
 ```
