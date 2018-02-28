@@ -1,37 +1,25 @@
-<%= form_with(model: monster, local: true) do |form| %>
-  <% if monster.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(monster.errors.count, "error") %> prohibited this monster from being saved:</h2>
-
-      <ul>
-      <% monster.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: monster, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: monster %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :monster_name %>
+    <%= f.label :name %>
+    <%= f.text_field :name, id: :monster_name, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :monster_user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :hitPoints %>
-    <%= form.number_field :hitPoints, id: :monster_hitPoints %>
+    <%= f.label :hitPoints %>
+    <%= f.number_field :hitPoints, id: :monster_hitPoints, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :damage %>
-    <%= form.number_field :damage, id: :monster_damage %>
+    <%= f.label :damage %>
+    <%= f.number_field :damage, id: :monster_damage, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
   </div>
 <% end %>

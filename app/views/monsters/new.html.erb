@@ -1,5 +1,11 @@
-<h1>New Monster</h1>
+<% provide(:title, "Create a Monster") %>
 
-<%= render 'form', monster: @monster %>
+<h1>Create a Monster</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'form', monster: @monster %>
+  </div>
+</div>
 
 <%= link_to 'Back', monsters_path %>
