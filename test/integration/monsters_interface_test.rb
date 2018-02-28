@@ -10,6 +10,8 @@ class MonstersInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_select 'div.pagination'
+    get new_monster_path
+    assert_select "input[type=file]"
     # Invalid submission
     assert_no_difference 'Monster.count' do
       post monsters_path, params: { monster: { name: "" } }
@@ -17,9 +19,11 @@ class MonstersInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
     # Valid submission
     name = "Tidus the Doombringer"
+    picture = fixture_file_upload("test/fixtures/rails.png", 'image/png')
     assert_difference 'Monster.count', 1 do
-      post monsters_path, params: { monster: { name: name } }
+      post monsters_path, params: { monster: { name: name, picture: picture } }
     end
+    assert assigns(:monster).picture?
     follow_redirect!
     assert_template 'monsters/show'
     # Edit monster

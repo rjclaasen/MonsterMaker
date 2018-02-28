@@ -32,7 +32,7 @@ class MonstersController < ApplicationController
       redirect_to monster_path(@monster)
     else
       @feed_items = []
-      render 'static_pages/home'
+      render 'new'
     end
   end
 
@@ -66,7 +66,7 @@ class MonstersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
-      params.require(:monster).permit(:name, :user_id, :hitPoints, :damage)
+      params.require(:monster).permit(:user_id, :name, :picture, :hitPoints, :damage)
     end
 
     def correct_user
