@@ -20,6 +20,10 @@ aarakocra:
   name: Aarakocra
   user: michael
 
+goblin:
+  name: Goblin
+  user: archer
+
 <% 30.times do |n| %>
 monster_<%= n %>:
   name: <%= Faker::Pokemon.name %>

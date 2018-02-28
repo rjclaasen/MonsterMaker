@@ -1,5 +1,7 @@
 <li id="monster-<%= monster.id %>">
   <span class="user"><%= link_to monster.user.name, monster.user %></span>
   <span class="name"><%= monster.name %></span>
-  <span class="timestamp">Posted <%= time_ago_in_words(monster.created_at) %> ago.</span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(monster.created_at) %> ago.
+  </span>
 </li>
