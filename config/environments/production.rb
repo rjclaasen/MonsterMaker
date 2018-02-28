@@ -59,15 +59,15 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "gm-tools_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "monstermaker_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = "gm-tools.herokuapp.com"
+  host = "monstermaker.herokuapp.com"
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address            => "smtp.sendgrid.net",
+    :address              => "smtp.sendgrid.net",
     :port                 => "587",
     :authentication       => :plain,
     :user_name            => ENV.fetch("SENDGRID_USERNAME"),

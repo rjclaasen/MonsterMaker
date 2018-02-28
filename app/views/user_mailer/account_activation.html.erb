@@ -1,8 +1,8 @@
-<h1>GM Tools</h1>
+<h1>Monster Maker</h1>
 
 <p>Hi <%= @user.name %>,</p>
 
-<p>Welcome to GM Tools! Click on the link below to activate your account:</p>
+<p>Welcome to Monster Maker! Click on the link below to activate your account:</p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
