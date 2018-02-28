@@ -1,0 +1,14 @@
+<%= form_for(@monster) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :hitPoints %>
+  <%= f.number_field :hitPoints, class: "form-control" %>
+
+  <%= f.label :damage %>
+  <%= f.number_field :damage, class: "form-control" %>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
