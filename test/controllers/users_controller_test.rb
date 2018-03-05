@@ -62,6 +62,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
+  test "should redirect index when logged in as a non-admin" do
+    log_in_as(@other_user)
+    get users_path
+    assert_redirected_to root_url
+  end
+
   test "should redirect destroy when logged in as a non-admin" do
     log_in_as(@other_user)
     assert_no_difference 'User.count' do
