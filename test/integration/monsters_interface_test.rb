@@ -8,8 +8,6 @@ class MonstersInterfaceTest < ActionDispatch::IntegrationTest
 
   test "monster interface" do
     log_in_as(@user)
-    get root_path
-    assert_select 'div.pagination'
     get new_monster_path
     assert_select "input[type=file]"
     # Invalid submission
