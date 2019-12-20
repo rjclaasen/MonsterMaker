@@ -7,27 +7,27 @@ end
 
 ruby '2.6.5'
 
-gem 'rails', '~> 6.0'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
-gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3'
 gem 'bootstrap-sass'
+gem 'bootstrap-will_paginate'
+gem 'carrierwave'
 gem 'coffee-rails', '~> 5.0'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
+gem 'mini_magick'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 6.0'
+gem 'sass-rails', '~> 5.0'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3'
+gem 'will_paginate'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 3.29'
   gem 'faker'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -46,8 +46,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'fog-aws'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
