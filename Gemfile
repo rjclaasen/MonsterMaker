@@ -69,7 +69,7 @@ group :test do
   gem 'guard'
   gem 'guard-minitest'
   # Use colors for test output in win32 console
-  gem 'win32console'
+  gem 'win32console', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 end
 
 group :production do
