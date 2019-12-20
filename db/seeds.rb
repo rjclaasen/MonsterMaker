@@ -28,6 +28,6 @@ end
 
 users = User.order(:created_at).take(6)
 50.times do
-  name = Faker::ElderScrolls.creature
+  name = Faker::Games::ElderScrolls.creature
   users.each { |user| user.monsters.create!(name: name) }
 end

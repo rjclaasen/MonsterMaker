@@ -26,6 +26,6 @@ goblin:
 
 <% 30.times do |n| %>
 monster_<%= n %>:
-  name: <%= Faker::Pokemon.name %>
+  name: <%= Faker::Games::Pokemon.name %>
   user: michael
 <% end %>
