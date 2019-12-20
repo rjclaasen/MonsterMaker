@@ -25,6 +25,7 @@ gem 'will_paginate'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 3.29'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'selenium-webdriver'
   gem 'sqlite3'
