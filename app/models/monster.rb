@@ -1,5 +1,4 @@
 class Monster < ApplicationRecord
-  belongs_to :user
   default_scope -> { order(name: :asc) }
   mount_uploader :picture, PictureUploader
   validates :name, presence: true, length: { maximum: 255 }

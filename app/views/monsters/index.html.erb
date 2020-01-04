@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>User</th>
       <th>Hitpoints</th>
       <th>Damage</th>
       <th colspan="3"></th>
@@ -17,7 +16,6 @@
     <% @monsters.each do |monster| %>
       <tr>
         <td><%= monster.name %></td>
-        <td><%= monster.user %></td>
         <td><%= monster.hitPoints %></td>
         <td><%= monster.damage %></td>
         <td><%= link_to 'Show', monster %></td>
