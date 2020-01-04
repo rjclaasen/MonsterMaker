@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'mini_magick'
+gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 6.0'
 gem 'sass-rails', '~> 5.0'
@@ -28,7 +29,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'selenium-webdriver'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -48,7 +48,6 @@ end
 
 group :production do
   gem 'fog-aws'
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
