@@ -43,7 +43,7 @@ group :test do
   gem 'guard-minitest'
   gem 'minitest-reporters'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 3.9'
+  gem 'rspec-rails', '~> 4.0.0.beta3'
   gem 'win32console', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 end
 
