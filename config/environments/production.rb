@@ -98,4 +98,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'http://localhost:8100' # Ionic serve location
+      resource '*', headers: :any, methods: [:get, :patch, :put, :delete, :post, :options]
+    end
+  end
 end
