@@ -101,8 +101,8 @@ Rails.application.configure do
 
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'http://localhost:8100' # Ionic serve location
-      resource '*', headers: :any, methods: [:get, :patch, :put, :delete, :post, :options]
+      origins '*'
+      resource '*', headers: :any, methods: [:get, :options]
     end
   end
 end
