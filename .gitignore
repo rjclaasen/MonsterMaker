@@ -28,3 +28,5 @@
 
 # Ignore uploaded test images.
 /public/uploads
+
+/config/master.key
