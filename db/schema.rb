@@ -17,11 +17,27 @@ ActiveRecord::Schema.define(version: 2020_01_04_154853) do
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
-    t.integer "hitPoints"
-    t.integer "damage"
+    t.string "hitPointsAndDice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
+    t.string "sizeTypeAlignment"
+    t.string "armorClass"
+    t.string "speed"
+    t.string "strength"
+    t.string "dexterity"
+    t.string "constitution"
+    t.string "intelligence"
+    t.string "wisdom"
+    t.string "charisma"
+    t.string "skills"
+    t.string "damageImmunities"
+    t.string "conditionImmunities"
+    t.string "senses"
+    t.string "languages"
+    t.string "challenge"
+    t.json "properties", array: true
+    t.json "actions", array: true
     t.index ["created_at"], name: "index_monsters_on_created_at"
   end
 

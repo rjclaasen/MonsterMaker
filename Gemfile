@@ -19,13 +19,13 @@ gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 6.0'
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3'
 gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 3.29'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'selenium-webdriver'
@@ -39,6 +39,7 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
   gem 'rails-controller-testing'

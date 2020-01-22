@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="monster-name">
   <strong>Name:</strong>
   <%= @monster.name %>
 </p>
 
 <p>
   <strong>Hitpoints:</strong>
-  <%= @monster.hitPoints %>
-</p>
-
-<p>
-  <strong>Damage:</strong>
-  <%= @monster.damage %>
+  <%= @monster.hitPointsAndDice %>
 </p>
 
 <%= link_to 'Edit', edit_monster_path(@monster) %> |

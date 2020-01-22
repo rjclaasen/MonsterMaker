@@ -1,36 +1,20 @@
-<%= form_with(model: monster, local: true) do |f| %>
-  <%= render 'shared/error_messages', object: monster %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, id: :monster_name, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :picture %>
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :hitPoints %>
-    <%= f.number_field :hitPoints, id: :monster_hitPoints, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :damage %>
-    <%= f.number_field :damage, id: :monster_damage, class: "form-control" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  </div>
+<%= simple_form_for @monster do |f| %>
+  <%= f.input :name %>
+  <%= f.input :sizeTypeAlignment %>
+  <%= f.input :armorClass %>
+  <%= f.input :hitPointsAndDice %>
+  <%= f.input :speed %>
+  <%= f.input :strength %>
+  <%= f.input :dexterity %>
+  <%= f.input :constitution %>
+  <%= f.input :intelligence %>
+  <%= f.input :wisdom %>
+  <%= f.input :charisma %>
+  <%= f.input :skills %>
+  <%= f.input :damageImmunities %>
+  <%= f.input :conditionImmunities %>
+  <%= f.input :senses %>
+  <%= f.input :languages %>
+  <%= f.input :challenge %>
+  <%= f.button :submit %>
 <% end %>
-
-<script type='text/javascript'>
-  $('#micropost_picture').bind('change', function() {
-    var size_in_megabytes = this.files[0].size/1024/1024;
-    if (size_in_megabytes > 5) {
-      alert("Maximum file size is 5MB. Please choose a smaller file.");
-    }
-  });
-</script>
