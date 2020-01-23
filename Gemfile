@@ -41,6 +41,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'webdrivers', '~> 4.0'
   gem 'guard'
   gem 'guard-rspec'
   gem 'rails-controller-testing'

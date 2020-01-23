@@ -2,6 +2,7 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require 'capybara/rspec'
+require 'webdrivers'
 
 require File.expand_path('../config/environment', __dir__)
 require File.expand_path('spec/support/factory_bot.rb')
