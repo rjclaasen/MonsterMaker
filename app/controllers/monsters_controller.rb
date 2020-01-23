@@ -67,6 +67,7 @@ class MonstersController < ApplicationController
       params.require(:monster).permit(:name, :sizeTypeAlignment, :armorClass, 
         :hitPointsAndDice, :speed, :strength, :dexterity, :constitution, 
         :intelligence, :wisdom, :charisma, :skills, :damageImmunities, 
-        :conditionImmunities, :senses, :languages, :challenge)
+        :conditionImmunities, :senses, :languages, :challenge,
+        properties_attributes: [:name, :description, :_destroy])
     end
 end

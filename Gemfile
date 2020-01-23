@@ -11,6 +11,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'carrierwave'
+gem 'cocoon'
 gem 'coffee-rails', '~> 5.0'
 gem 'haml-rails', '~> 2.0'
 gem 'jbuilder', '~> 2.5'
@@ -29,7 +30,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -45,6 +45,7 @@ group :test do
   gem 'guard-rspec'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0.0.beta3'
+  gem 'selenium-webdriver'
   gem 'win32console', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 end
 

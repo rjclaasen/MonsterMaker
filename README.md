@@ -6,6 +6,11 @@ This is a website dedicated to the creation of Monsters in Dungeons and Dragons 
 
 All source code is available under the GNU General Public License. See [LICENSE](LICENSE) for details.
 
+## Dependencies
+
+* Ruby
+* GeckoDriver 
+
 ## Getting started
 
 To run Monster Maker yourself, clone the repo and then install the needed gems:

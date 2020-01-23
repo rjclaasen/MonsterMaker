@@ -17,4 +17,11 @@
   = f.input :senses
   = f.input :languages
   = f.input :challenge
+  %div
+    %h3 Properties
+    #properties
+      = f.simple_fields_for :properties do |property|
+        = render 'property_fields', f: property
+      .links
+        = link_to_add_association 'Add property', f, :properties
   = f.button :submit
