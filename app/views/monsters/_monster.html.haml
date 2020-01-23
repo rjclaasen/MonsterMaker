@@ -1,0 +1,6 @@
+%li{:id => "monster-#{monster.id}"}
+  %span.name= monster.name
+  %span.picture
+    = image_tag monster.picture.url if monster.picture?
+    %span.timestamp
+      Posted #{time_ago_in_words(monster.created_at)} ago.

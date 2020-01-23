@@ -1,7 +1,0 @@
-<li id="monster-<%= monster.id %>">
-  <span class="name"><%= monster.name %></span>
-  <span class="picture"><%= image_tag monster.picture.url if monster.picture? %>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(monster.created_at) %> ago.
-  </span>
-</li>

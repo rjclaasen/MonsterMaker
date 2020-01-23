@@ -1,0 +1,10 @@
+%p#notice= notice
+%p.monster-name
+  %strong Name:
+  = @monster.name
+%p
+  %strong Hitpoints:
+  = @monster.hitPointsAndDice
+= link_to 'Edit', edit_monster_path(@monster)
+|
+= link_to 'Back', monsters_path
