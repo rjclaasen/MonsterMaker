@@ -9,7 +9,6 @@ All source code is available under the GNU General Public License. See [LICENSE]
 ## Dependencies
 
 * Ruby
-* GeckoDriver 
 
 ## Getting started
 
@@ -23,7 +22,7 @@ $ rails db:migrate
 ```
 Finally, run the test suite to verify that everything is working correctly:
 ```
-$ rails test
+$ bundle exec rspec
 ```
 If the test suite passes, you'll be ready to run the app in a local server:
 ```
