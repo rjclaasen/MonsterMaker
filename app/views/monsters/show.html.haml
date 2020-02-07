@@ -8,6 +8,9 @@
 %h3 Traits
 %ul
   = render @monster.traits
+%h3 Actions
+%ul
+  = render @monster.actions
 = link_to 'Edit', edit_monster_path(@monster)
 |
 = link_to 'Back', monsters_path

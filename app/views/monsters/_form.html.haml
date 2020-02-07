@@ -24,4 +24,11 @@
         = render 'trait_fields', f: trait
       .links
         = link_to_add_association 'Add trait', f, :traits
+  %div
+    %h3 Actions
+    #actions
+      = f.simple_fields_for :actions do |action|
+        = render 'action_fields', f: action
+      .links
+        = link_to_add_association 'Add action', f, :actions
   = f.button :submit

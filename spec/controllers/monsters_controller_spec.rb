@@ -45,5 +45,15 @@ describe MonstersController do
       it { expect { subject }.to_not change(Trait, :count) }
       it { expect { subject }.to change{ test_monster.reload.traits.first.name }.from("Unedited Trait").to("Edited Trait") }
     end
+
+    context "when an Action is updated" do
+      before { test_monster.actions << build(:action, name: "Unedited Action") }
+
+      let(:monster_action) { test_monster.actions.first }
+      let(:monster_params) { { name: test_monster.name, actions: [{ id: monster_action.id, name: "Edited Action"}] } }
+
+      it { expect { subject }.to_not change(Action, :count) }
+      it { expect { subject }.to change{ test_monster.reload.actions.first.name }.from("Unedited Action").to("Edited Action") }
+    end
   end
 end
