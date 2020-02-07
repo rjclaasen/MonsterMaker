@@ -17,7 +17,7 @@ feature 'User creates a monster with a property', js: true do
 
     fill_in 'Name', with: "My Monster"
     click_link "Add property"
-    page.find('h3', :text => "Properties").find(:xpath, '..')
+    page.find('h3', text: "Properties").find(:xpath, '..')
       .fill_in 'Name', with: "My Property"
 
     click_button "Create Monster"

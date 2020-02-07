@@ -22,4 +22,28 @@ describe MonstersController do
       end
     end
   end
+
+  describe "PATCH #update" do
+    let(:test_monster) { create(:monster, name: "Name") }
+    let(:params) { { id: test_monster.id, monster: monster_params } }
+
+    before { test_monster }
+    subject { patch :update, params: params }
+
+    context "when the name is updated" do
+      let(:monster_params) { { name: "Edited Name" } }
+
+      it { expect { subject }.to change{ Monster.first.name }.from("Name").to("Edited Name") }
+    end
+
+    context "when a property is updated" do
+      before { test_monster.properties << build(:property, name: "Unedited Property") }
+
+      let(:monster_property) { test_monster.properties.first }
+      let(:monster_params) { { name: test_monster.name, properties: [{ id: monster_property.id, name: "Edited Property"}] } }
+
+      it { expect { subject }.to_not change(Property, :count) }
+      it { expect { subject }.to change{ test_monster.reload.properties.first.name }.from("Unedited Property").to("Edited Property") }
+    end
+  end
 end
