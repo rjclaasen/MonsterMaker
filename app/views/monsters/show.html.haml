@@ -5,9 +5,9 @@
 %p
   %strong Hitpoints:
   = @monster.hitPointsAndDice
-%h3 Properties
+%h3 Traits
 %ul
-  = render @monster.properties
+  = render @monster.traits
 = link_to 'Edit', edit_monster_path(@monster)
 |
 = link_to 'Back', monsters_path

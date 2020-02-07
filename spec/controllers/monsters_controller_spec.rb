@@ -36,14 +36,14 @@ describe MonstersController do
       it { expect { subject }.to change{ Monster.first.name }.from("Name").to("Edited Name") }
     end
 
-    context "when a property is updated" do
-      before { test_monster.properties << build(:property, name: "Unedited Property") }
+    context "when a Trait is updated" do
+      before { test_monster.traits << build(:trait, name: "Unedited Trait") }
 
-      let(:monster_property) { test_monster.properties.first }
-      let(:monster_params) { { name: test_monster.name, properties: [{ id: monster_property.id, name: "Edited Property"}] } }
+      let(:monster_trait) { test_monster.traits.first }
+      let(:monster_params) { { name: test_monster.name, traits: [{ id: monster_trait.id, name: "Edited Trait"}] } }
 
-      it { expect { subject }.to_not change(Property, :count) }
-      it { expect { subject }.to change{ test_monster.reload.properties.first.name }.from("Unedited Property").to("Edited Property") }
+      it { expect { subject }.to_not change(Trait, :count) }
+      it { expect { subject }.to change{ test_monster.reload.traits.first.name }.from("Unedited Trait").to("Edited Trait") }
     end
   end
 end

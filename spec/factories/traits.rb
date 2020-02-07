@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :property do
+  factory :trait do
     monster { build(:monster) }
     name { Faker::Games::LeagueOfLegends::masteries }
   end

@@ -1,13 +1,13 @@
 class Monster < ApplicationRecord
-  has_many :properties
+  has_many :traits
 
   default_scope -> { order(name: :asc) }
   mount_uploader :picture, PictureUploader
   validates :name, presence: true, length: { maximum: 255 }
   validate  :picture_size
 
-  accepts_nested_attributes_for :properties, reject_if: :all_blank, allow_destroy: true
-  validates_associated :properties
+  accepts_nested_attributes_for :traits, reject_if: :all_blank, allow_destroy: true
+  validates_associated :traits
 
   private
 

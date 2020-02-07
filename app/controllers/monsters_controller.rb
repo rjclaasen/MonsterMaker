@@ -65,12 +65,12 @@ class MonstersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
       params.require(:monster).tap { |whitelisted| 
-        whitelisted[:properties_attributes] = whitelisted[:properties] if whitelisted.has_key?(:properties) 
-      }.except(:properties)
+        whitelisted[:traits_attributes] = whitelisted[:traits] if whitelisted.has_key?(:traits) 
+      }.except(:traits)
         .permit(:id, :name, :sizeTypeAlignment, :armorClass, 
         :hitPointsAndDice, :speed, :strength, :dexterity, :constitution, 
         :intelligence, :wisdom, :charisma, :skills, :damageImmunities, 
         :conditionImmunities, :senses, :languages, :challenge,
-        properties_attributes: [:id, :name, :description, :_destroy])
+        traits_attributes: [:id, :name, :description, :_destroy])
     end
 end

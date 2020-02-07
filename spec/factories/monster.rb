@@ -2,13 +2,13 @@ FactoryBot.define do
   factory :monster do
     name { Faker::Games::Pokemon.name }
 
-    trait :with_properties do
+    trait :with_traits do
       transient do
-        properties_count { 2 }
+        traits_count { 2 }
       end
 
       after(:create) do |monster, evaluator|
-        create_list(:property, evaluator.properties_count, monster: monster)
+        create_list(:trait, evaluator.traits_count, monster: monster)
       end
     end
   end

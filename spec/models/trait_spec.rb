@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-describe Property, type: :model do
+describe Trait, type: :model do
   context "with a 255 character long name" do
-    subject { build(:property) }
+    subject { build(:trait) }
     it { is_expected.to be_valid }
   end
   context "with a 256 character long name" do
-    subject { build(:property, name: "A"*256) }
+    subject { build(:trait, name: "A"*256) }
     it { is_expected.to_not be_valid }
   end
 end
