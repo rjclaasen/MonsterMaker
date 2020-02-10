@@ -5,6 +5,8 @@ class Monster < ApplicationRecord
   default_scope -> { order(name: :asc) }
   mount_uploader :picture, PictureUploader
   validates :name, presence: true, length: { maximum: 255 }
+  validates :strength, :dexterity, :constitution, :intelligence, :wisdom, 
+    :charisma, numericality: { only_integer: true, allow_nil: true }
   validate  :picture_size
 
   accepts_nested_attributes_for :traits, reject_if: :all_blank, allow_destroy: true
