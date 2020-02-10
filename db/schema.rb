@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_152438) do
+ActiveRecord::Schema.define(version: 2020_02_10_201603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 2020_02_10_152438) do
     t.string "sizeTypeAlignment"
     t.string "armorClass"
     t.string "speed"
-    t.string "strength"
-    t.string "dexterity"
-    t.string "constitution"
-    t.string "intelligence"
-    t.string "wisdom"
-    t.string "charisma"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "intelligence"
+    t.integer "wisdom"
+    t.integer "charisma"
     t.string "skills"
     t.string "damageImmunities"
     t.string "conditionImmunities"
