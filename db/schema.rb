@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_07_135234) do
+ActiveRecord::Schema.define(version: 2020_02_10_152438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(version: 2020_02_07_135234) do
     t.string "challenge"
     t.json "traits", array: true
     t.json "actions", array: true
+    t.string "savingThrows"
+    t.string "damageVulnerabilities"
+    t.string "damageResistances"
     t.index ["created_at"], name: "index_monsters_on_created_at"
   end
 

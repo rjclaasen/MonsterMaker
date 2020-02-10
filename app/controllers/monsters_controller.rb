@@ -70,7 +70,8 @@ class MonstersController < ApplicationController
       }.except(:traits).except(:actions)
         .permit(:id, :name, :sizeTypeAlignment, :armorClass, 
         :hitPointsAndDice, :speed, :strength, :dexterity, :constitution, 
-        :intelligence, :wisdom, :charisma, :skills, :damageImmunities, 
+        :intelligence, :wisdom, :charisma, :savingThrows, :skills, 
+        :damageVulnerabilities, :damageResistances, :damageImmunities, 
         :conditionImmunities, :senses, :languages, :challenge,
         traits_attributes: [:id, :name, :description, :_destroy],
         actions_attributes: [:id, :name, :description, :_destroy])

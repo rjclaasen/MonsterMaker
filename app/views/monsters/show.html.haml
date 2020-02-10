@@ -23,8 +23,17 @@
                      :"data-cha" => "#{@monster.charisma}"}
 
     %property-line
+      %h4 Saving Throws
+      %p= @monster.savingThrows
+    %property-line
       %h4 Skills
       %p= @monster.skills
+    %property-line
+      %h4 Damage Vulnerabilities
+      %p= @monster.damageVulnerabilities
+    %property-line
+      %h4 Damage Resistances
+      %p= @monster.damageResistances
     %property-line
       %h4 Damage Immunities
       %p= @monster.damageImmunities
