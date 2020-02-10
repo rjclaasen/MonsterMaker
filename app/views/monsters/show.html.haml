@@ -1,16 +1,49 @@
 %p#notice= notice
-%p.monster-name
-  %strong Name:
-  = @monster.name
-%p
-  %strong Hitpoints:
-  = @monster.hitPointsAndDice
-%h3 Traits
-%ul
+
+%stat-block
+  %creature-heading
+    %h1= @monster.name
+    %h3= @monster.sizeTypeAlignment
+  %top-stats
+    %property-line
+      %h4 Armor Class
+      %p= @monster.armorClass
+    %property-line
+      %h4 Hit Points
+      %p= @monster.hitPointsAndDice
+    %property-line
+      %h4 Speed
+      %p= @monster.speed
+
+    %abilities-block{:"data-str" => "#{@monster.strength}", 
+                     :"data-dex" => "#{@monster.dexterity}",
+                     :"data-con" => "#{@monster.constitution}",
+                     :"data-int" => "#{@monster.intelligence}",
+                     :"data-wis" => "#{@monster.wisdom}",
+                     :"data-cha" => "#{@monster.charisma}"}
+
+    %property-line
+      %h4 Damage Immunities
+      %p= @monster.damageImmunities
+    %property-line
+      %h4 Condition Immunities
+      %p= @monster.conditionImmunities
+    %property-line
+      %h4 Senses
+      %p= @monster.senses
+    %property-line
+      %h4 Languages
+      %p= @monster.languages
+    %property-line
+      %h4 Challenge
+      %p= @monster.challenge
+
   = render @monster.traits
-%h3 Actions
-%ul
+
+  %h3 Actions
   = render @monster.actions
+
+
 = link_to 'Edit', edit_monster_path(@monster)
 |
 = link_to 'Back', monsters_path
