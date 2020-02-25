@@ -24,10 +24,14 @@ class RemoveModifiersFromAbilityScores < ActiveRecord::Migration[6.0]
   end
 
   def remove_modifier(string)
+    return nil if string.nil?
+
     return string[/\d+/]
   end
 
   def add_modifier(ability_score)
+    return nil if ability_score.nil?
+
     modifier = ((ability_score.to_i - 10) / 2).floor
 
     return "#{ability_score} (#{add_plus_maybe(modifier)})"
