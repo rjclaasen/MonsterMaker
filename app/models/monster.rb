@@ -1,4 +1,6 @@
 class Monster < ApplicationRecord
+  self.inheritance_column = :_type
+
   has_many :traits
   has_many :actions
 

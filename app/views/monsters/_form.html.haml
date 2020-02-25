@@ -1,7 +1,9 @@
 = simple_form_for @monster do |f|
   = f.input :name
   = f.input :picture, accept: 'image/jpeg,image/gif,image/png'
-  = f.input :sizeTypeAlignment
+  = f.input :size
+  = f.input :type
+  = f.input :alignment
   = f.input :armorClass
   = f.input :hitPointsAndDice
   = f.input :speed

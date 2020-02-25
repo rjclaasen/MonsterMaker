@@ -68,7 +68,7 @@ class MonstersController < ApplicationController
         whitelisted[:traits_attributes] = whitelisted[:traits] if whitelisted.has_key?(:traits) 
         whitelisted[:actions_attributes] = whitelisted[:actions] if whitelisted.has_key?(:actions)
       }.except(:traits).except(:actions)
-        .permit(:id, :name, :sizeTypeAlignment, :armorClass, 
+        .permit(:id, :name, :size, :type, :alignment, :armorClass, 
         :hitPointsAndDice, :speed, :strength, :dexterity, :constitution, 
         :intelligence, :wisdom, :charisma, :savingThrows, :skills, 
         :damageVulnerabilities, :damageResistances, :damageImmunities, 
