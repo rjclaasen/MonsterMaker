@@ -3,19 +3,17 @@ class SplitSizeTypeAlignment < ActiveRecord::Migration[6.0]
     add_column :monsters, :size, :string
     add_column :monsters, :type, :string
     add_column :monsters, :alignment, :string
+    Monster.reset_column_information
 
     Monster.find_each do |monster|
-      if monster.sizeTypeAlignment?
+      if monster.sizeTypeAlignment.present?
         removedCommas = monster.sizeTypeAlignment.gsub(/,/, "")
         splitString = removedCommas.split(" ")
 
         size, type, *tail = splitString
         alignment = tail.join(' ')
 
-        monster.size = size
-        monster.type = type
-        monster.alignment = alignment
-        monster.save!
+        monster.update_attributes!(size: size, type: type, alignment: alignment)
       end
     end
 
@@ -24,16 +22,17 @@ class SplitSizeTypeAlignment < ActiveRecord::Migration[6.0]
 
   def down
     add_column :monsters, :sizeTypeAlignment, :string
+    Monster.reset_column_information
 
     Monster.find_each do |monster|
-      monster.sizeTypeAlignment = "#{monster.size} #{monster.type}".strip
+      sizeTypeAlignment = "#{monster.size} #{monster.type}".strip
 
-      if monster.alignment?
-        monster.sizeTypeAlignment += ", " if !monster.sizeTypeAlignment.blank?
-        monster.sizeTypeAlignment += monster.alignment
+      if monster.alignment.present?
+        sizeTypeAlignment += ", " if !sizeTypeAlignment.blank?
+        sizeTypeAlignment += monster.alignment
       end
 
-      monster.save!
+      monster.update!(sizeTypeAlignment: sizeTypeAlignment)
     end
 
     remove_column :monsters, :size
