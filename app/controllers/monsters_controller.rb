@@ -67,13 +67,15 @@ class MonstersController < ApplicationController
       params.require(:monster).tap { |whitelisted| 
         whitelisted[:traits_attributes] = whitelisted[:traits] if whitelisted.has_key?(:traits) 
         whitelisted[:actions_attributes] = whitelisted[:actions] if whitelisted.has_key?(:actions)
-      }.except(:traits).except(:actions)
+        whitelisted[:reactions_attributes] = whitelisted[:reactions] if whitelisted.has_key?(:reactions)
+      }.except(:traits).except(:actions).except(:reactions)
         .permit(:id, :name, :size, :type, :alignment, :armorClass, 
         :armorSource, :hitPointsAndDice, :speed, :strength, :dexterity, 
         :constitution, :intelligence, :wisdom, :charisma, :savingThrows, 
         :skills, :damageVulnerabilities, :damageResistances, :damageImmunities, 
         :conditionImmunities, :senses, :languages, :challenge,
         traits_attributes: [:id, :name, :description, :_destroy],
-        actions_attributes: [:id, :name, :description, :_destroy])
+        actions_attributes: [:id, :name, :description, :_destroy],
+        reactions_attributes: [:id, :name, :description, :_destroy])
     end
 end

@@ -3,5 +3,5 @@ json.extract! monster, :id, :name, :size, :type, :alignment,
   :constitution, :intelligence, :wisdom, :charisma, :savingThrows, :skills, 
   :damageVulnerabilities, :damageResistances, :damageImmunities, 
   :conditionImmunities, :senses, :languages, :challenge, :traits, :actions, 
-  :created_at, :updated_at
+  :reactions, :created_at, :updated_at
 json.url monster_url(monster, format: :json)

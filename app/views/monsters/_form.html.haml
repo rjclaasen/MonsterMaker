@@ -37,4 +37,12 @@
         = render 'action_fields', f: action
       .links
         = link_to_add_association 'Add action', f, :actions
+  %div
+    %h3 Reactions
+    #reactions
+      = f.simple_fields_for :reactions do |reaction|
+        = render 'reaction_fields', f: reaction
+      .links
+        = link_to_add_association 'Add reaction', f, :reactions
+
   = f.button :submit

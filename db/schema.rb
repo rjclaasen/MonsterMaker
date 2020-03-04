@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_173328) do
+ActiveRecord::Schema.define(version: 2020_03_04_153021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,15 @@ ActiveRecord::Schema.define(version: 2020_02_25_173328) do
     t.string "alignment"
     t.string "armorSource"
     t.index ["created_at"], name: "index_monsters_on_created_at"
+  end
+
+  create_table "reactions", force: :cascade do |t|
+    t.bigint "monster_id"
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["monster_id"], name: "index_reactions_on_monster_id"
   end
 
   create_table "traits", force: :cascade do |t|

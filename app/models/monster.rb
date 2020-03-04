@@ -3,6 +3,7 @@ class Monster < ApplicationRecord
 
   has_many :traits
   has_many :actions
+  has_many :reactions
 
   default_scope -> { order(name: :asc) }
   mount_uploader :picture, PictureUploader
@@ -13,8 +14,10 @@ class Monster < ApplicationRecord
 
   accepts_nested_attributes_for :traits, reject_if: :all_blank, allow_destroy: true
   accepts_nested_attributes_for :actions, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :reactions, reject_if: :all_blank, allow_destroy: true
   validates_associated :traits
   validates_associated :actions
+  validates_associated :reactions
 
   private
 
