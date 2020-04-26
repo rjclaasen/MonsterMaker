@@ -15,12 +15,21 @@
       %h4 Speed
       %p= @monster.speed
 
-    %abilities-block{:"data-str" => "#{@monster.strength}", 
-                     :"data-dex" => "#{@monster.dexterity}",
-                     :"data-con" => "#{@monster.constitution}",
-                     :"data-int" => "#{@monster.intelligence}",
-                     :"data-wis" => "#{@monster.wisdom}",
-                     :"data-cha" => "#{@monster.charisma}"}
+    %table
+      %tr
+        %th Strength
+        %th Dexterity
+        %th Constitution
+        %th Intelligence
+        %th Wisdom
+        %th Charisma
+      %tr
+        %td= @monster.strength
+        %td= @monster.dexterity
+        %td= @monster.constitution
+        %td= @monster.intelligence
+        %td= @monster.wisdom
+        %td= @monster.charisma
 
     %property-line
       %h4 Saving Throws

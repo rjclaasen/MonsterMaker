@@ -10,6 +10,19 @@ feature 'User creates a monster' do
     expect(page).to have_content "My Monster"
   end
 
+  context 'with an ability score' do
+    scenario 'they see the ability score on the page' do
+      visit new_monster_path
+
+      fill_in 'Name', with: "My Monster"
+      fill_in 'Strength', with: 8
+
+      click_button "Create Monster"
+
+      expect(page).to have_content "8"
+    end
+  end
+
   context 'with a trait', js: true do
     scenario 'they see the trait on the page' do
       visit new_monster_path
