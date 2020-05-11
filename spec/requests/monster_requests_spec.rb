@@ -7,7 +7,7 @@ describe "Index requests", type: :request do
     headers = { "ACCEPT" => "application/json" }
     get "/monsters.json"
 
-    expect(response.content_type).to eq("application/json")
+    expect(response.media_type).to eq("application/json")
     expect(response).to have_http_status(:ok)
   end
 end
