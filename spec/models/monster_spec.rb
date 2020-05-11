@@ -7,7 +7,7 @@ describe Monster, type: :model do
   end
 
   context "with a 256 character long name" do
-    subject { build(:monster, name: "A"*256) }
+    subject { build(:monster, name: "A" * 256) }
     it { is_expected.to_not be_valid }
   end
 
