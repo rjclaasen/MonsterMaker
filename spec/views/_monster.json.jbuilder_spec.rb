@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "monsters/show.json" do
-  context "when the monster has an owner" do
+  context "when the monster has an author" do
     let(:email) { Faker::Internet.email }
     let(:time) { 1.year.ago }
     let(:user) { build(:user, username: "User123", email: email, created_at: time, updated_at: time) }

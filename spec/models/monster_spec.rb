@@ -21,13 +21,13 @@ describe Monster, type: :model do
     it { is_expected.to_not be_valid }
   end
 
-  context "with no owner" do
-    subject { build(:monster, owner: nil) }
+  context "with no author" do
+    subject { build(:monster, author: nil) }
     it { is_expected.to be_valid }
   end
 
-  context "with an owner" do
-    subject { build(:monster, owner: build(:user)) }
+  context "with an author" do
+    subject { build(:monster, author: build(:user)) }
     it { is_expected.to be_valid }
   end
 end
