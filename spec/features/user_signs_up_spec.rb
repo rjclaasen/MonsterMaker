@@ -4,8 +4,9 @@ feature 'User signs up', type: :feature do
   scenario 'they submit their account information and are shown an alert' do
     visit new_user_registration_path
 
+    fill_in 'Username', with: "User"
     fill_in 'Email', with: "email@website.com"
-    fill_in 'Password', with: "password"
+    fill_in 'Password', with: "password", match: :prefer_exact
     fill_in 'Password confirmation', with: "password"
 
     click_button "Sign up"
