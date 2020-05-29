@@ -25,6 +25,7 @@ class MonstersController < ApplicationController
   # POST /monsters.json
   def create
     @monster = Monster.new(monster_params)
+    @monster.user = current_user
     if @monster.save
       flash[:success] = "Monster created!"
       redirect_to monster_path(@monster)
