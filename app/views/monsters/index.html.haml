@@ -5,13 +5,14 @@
     %tr
       %th Name
       %th Challenge
-      %th Damage
+      %th Author
       %th{:colspan => "3"}
   %tbody
     - @monsters.each do |monster|
       %tr
         %td= monster.name
         %td= monster.challenge
+        %td= monster.user&.username
         %td= link_to 'Show', monster
         %td= link_to 'Edit', edit_monster_path(monster)
         %td= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' }
