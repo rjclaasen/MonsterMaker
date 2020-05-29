@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe "Index requests", type: :request do
+  
   before { create(:monster, name: "Monster name") }
 
   it "returns the monster info" do
