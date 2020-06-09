@@ -1,5 +1,7 @@
 class MonstersController < ApplicationController
   before_action :set_monster, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authorize_user, only: [:update, :destroy]
 
   # GET /monsters
   # GET /monsters.json
@@ -61,6 +63,12 @@ class MonstersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_monster
       @monster = Monster.find(params[:id])
+    end
+
+    def authorize_user
+      if current_user != @monster.author
+        redirect_to(@monster, notice: "You are not the author of this monster")
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
