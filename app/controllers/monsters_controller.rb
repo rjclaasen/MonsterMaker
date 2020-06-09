@@ -16,6 +16,8 @@ class MonstersController < ApplicationController
 
   # GET /monsters/new
   def new
+    flash.now[:alert] = t('.not_signed_in') unless user_signed_in?
+
     @monster = Monster.new
   end
 
@@ -27,7 +29,7 @@ class MonstersController < ApplicationController
   # POST /monsters.json
   def create
     @monster = Monster.new(monster_params)
-    @monster.user = current_user
+    @monster.author = current_user
     if @monster.save
       flash[:success] = "Monster created!"
       redirect_to monster_path(@monster)

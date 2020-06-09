@@ -30,4 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  monsters:
+    new:
+      not_signed_in: |
+        You are not signed in. 
+        You can still create monsters, but you will not be able to edit or delete this monster after it is created. 
+        Sign in first to gain ownership over the monsters you create.

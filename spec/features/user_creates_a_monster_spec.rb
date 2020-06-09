@@ -2,6 +2,13 @@ require 'rails_helper'
 
 feature 'User creates a monster' do
   context "when they are not logged in" do
+    scenario "they are warned they will not be able to edit it" do
+
+      visit new_monster_path
+
+      expect(page).to have_content "will not be able to edit or delete"
+    end
+
     scenario "they see the monster's name on the page" do
 
       visit new_monster_path
