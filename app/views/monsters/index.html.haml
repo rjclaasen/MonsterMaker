@@ -14,7 +14,8 @@
         %td= monster.challenge
         %td= monster.user&.username
         %td= link_to 'Show', monster
-        %td= link_to 'Edit', edit_monster_path(monster)
-        %td= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' }
+        - if user_signed_in? && monster.author == current_user
+          %td= link_to 'Edit', edit_monster_path(monster)
+          %td= link_to 'Delete', monster, method: :delete, data: { confirm: I18n.t("monsters.confirm_delete", monster_name: monster.name) } 
 %br/
 = link_to 'New Monster', new_monster_path

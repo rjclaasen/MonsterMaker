@@ -36,3 +36,4 @@ en:
         You are not signed in. 
         You can still create monsters, but you will not be able to edit or delete this monster after it is created. 
         Sign in first to gain ownership over the monsters you create.
+    confirm_delete: Are you sure you want to delete %{monster_name}? This action cannot be reversed.

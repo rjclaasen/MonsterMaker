@@ -3,4 +3,4 @@
 = link_to 'Show', @monster
 |
 = link_to 'Back', monsters_path
-= link_to "Delete", @monster, method: :delete, data: { confirm: "Are you sure?" }
+= link_to 'Delete', @monster, method: :delete, data: { confirm: I18n.t("monsters.confirm_delete", monster_name: @monster.name) } 
