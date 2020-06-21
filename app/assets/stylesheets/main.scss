@@ -166,6 +166,19 @@ input {
 
 /* monsters */
 
+.monster-list {
+  width: 100%;
+  thead tr {
+    border-bottom: 1px solid black;
+  }
+  tbody tr {
+    border-top: 1px solid $gray-medium-light;
+  }
+  td, th {
+    padding: 0.4em;
+  }
+}
+
 .monsters {
   list-style: none;
   padding: 0;

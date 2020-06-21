@@ -1,12 +1,11 @@
 %p#notice= notice
 %h1 Monsters
-%table
+%table.monster-list
   %thead
     %tr
       %th Name
       %th Challenge
       %th Author
-      %th{:colspan => "3"}
   %tbody
     - @monsters.each do |monster|
       %tr
