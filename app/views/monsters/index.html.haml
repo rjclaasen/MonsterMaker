@@ -4,12 +4,14 @@
   %thead
     %tr
       %th Name
+      %th Type
       %th Challenge
       %th Author
   %tbody
     - @monsters.each do |monster|
       %tr
         %td= link_to monster.name, monster
+        %td= monster.type
         %td= monster.challenge
         %td= monster.user&.username
 %br/
