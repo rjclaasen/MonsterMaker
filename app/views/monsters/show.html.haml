@@ -68,7 +68,7 @@
   = render @monster.reactions
 
 
+= link_to 'Back', monsters_path, class: "btn btn-outline-secondary"
 - if user_signed_in? && @monster.author == current_user
-  = link_to 'Edit', edit_monster_path(@monster)
   |
-= link_to 'Back', monsters_path
+  = link_to 'Edit', edit_monster_path(@monster), class: "btn btn-outline-primary"

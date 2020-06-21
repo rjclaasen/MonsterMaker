@@ -1,31 +1,23 @@
 source 'https://rubygems.org'
-
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
-gem 'bootstrap-sass'
-gem 'bootstrap-will_paginate'
 gem 'carrierwave'
 gem 'cocoon'
-gem 'coffee-rails', '~> 5.0'
 gem 'devise'
 gem 'haml-rails', '~> 2.0'
-gem 'jbuilder', '~> 2.5'
-gem 'jquery-rails'
+gem 'jbuilder', '~> 2.7'
 gem 'migration_data'
 gem 'mini_magick'
 gem 'pg'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0'
-gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3'
+gem 'webpacker', '~> 4.0'
 gem 'will_paginate'
 
 group :development, :test do

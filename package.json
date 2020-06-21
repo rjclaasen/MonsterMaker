@@ -1,5 +1,17 @@
 {
   "name": "monstermaker",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/activestorage": "^6.0.3-2",
+    "@rails/ujs": "^6.0.3-2",
+    "@rails/webpacker": "4.2.2",
+    "bootstrap": "^4.5.0",
+    "cocoon-js": "^0.0.5",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
 }

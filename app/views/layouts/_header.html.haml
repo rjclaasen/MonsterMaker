@@ -1,14 +1,14 @@
 %body
-  %header.navbar.navbar-fixed-top.navbar-inverse
+  %header.navbar.navbar-expand-md.navbar-dark.bg-dark
     .container
-      = link_to "MonsterMaker", root_path, id: "logo"
+      = link_to "MonsterMaker", root_path, id: 'logo', class: 'navbar-brand'
       %nav
         %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Home",   root_path
-          %li= link_to "Help",   help_path
+          %li.nav-item= link_to "Home", root_path, class: 'nav-link'
+          %li.nav-item= link_to "Help", help_path, class: 'nav-link'
           - if user_signed_in?
-            %li= link_to "Edit Profile", edit_user_registration_path
-            %li= link_to "Sign out", destroy_user_session_path, method: :delete
+            %li.nav-item= link_to "Edit Profile", edit_user_registration_path, class: 'nav-link'
+            %li.nav-item= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link'
           - else
-            %li= link_to "Sign up", new_user_registration_path
-            %li= link_to "Sign in", new_user_session_path
+            %li.nav-item= link_to "Sign up", new_user_registration_path, class: 'nav-link'
+            %li.nav-item= link_to "Sign in", new_user_session_path, class: 'nav-link'
