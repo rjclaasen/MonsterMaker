@@ -15,7 +15,7 @@ All source code is available under the GNU General Public License. See [LICENSE]
 
 ## Getting started
 
-To run Monster Maker yourself, clone the repo and then install the needed gems and javascript dependencies:
+To run Monster Maker yourself, clone the repo and then install the needed dependencies:
 ```
 $ bundle install
 $ yarn install
