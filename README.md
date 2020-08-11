@@ -8,7 +8,7 @@ All source code is available under the GNU General Public License. See [LICENSE]
 
 ## Dependencies
 
-* Ruby
+* Ruby (and Bundler)
 * PostgreSQL
 * Node.js
 * Yarn
@@ -20,19 +20,14 @@ To run Monster Maker yourself, clone the repo and then install the needed depend
 $ bundle install
 $ yarn install
 ```
-Next, set up the database credentials:
-```
-$ export MONSTERMAKER_DATABASE_USERNAME='your-postgres-username-here'
-$ export MONSTERMAKER_DATABASE_PASSWORD='your-postgres-password-here'
-```
-Then, set up the database:
+Then set up the database:
 ```
 $ rails db:create
 $ rails db:migrate
 ```
 Finally, run the test suite to verify that everything is working correctly:
 ```
-$ bundle exec rspec
+$ rspec
 ```
 If the test suite passes, you'll be ready to run the app in a local server:
 ```
