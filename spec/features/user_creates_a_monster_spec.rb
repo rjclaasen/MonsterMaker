@@ -19,6 +19,16 @@ feature 'User creates a monster' do
       expect(page).to have_content "My Monster"
     end
 
+    scenario "they are notified the action was a success" do
+
+      visit new_monster_path
+
+      fill_in 'Name', with: "My Monster"
+      click_button "Create Monster"
+
+      expect(page).to have_content "Monster created"
+    end
+
     scenario "there is no author div" do
 
       visit new_monster_path

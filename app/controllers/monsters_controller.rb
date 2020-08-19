@@ -31,10 +31,8 @@ class MonstersController < ApplicationController
     @monster = Monster.new(monster_params)
     @monster.author = current_user
     if @monster.save
-      flash[:success] = "Monster created!"
-      redirect_to monster_path(@monster)
+      redirect_to monster_path(@monster), notice: "Monster created!"
     else
-      @feed_items = []
       render 'new'
     end
   end
@@ -44,7 +42,7 @@ class MonstersController < ApplicationController
   def update
     respond_to do |format|
       if @monster.update(monster_params)
-        format.html { redirect_to @monster, notice: 'Monster was successfully updated.' }
+        format.html { redirect_to @monster, notice: "Monster was successfully updated." }
         format.json { render :show, status: :ok, location: @monster }
       else
         format.html { render :edit }
