@@ -29,20 +29,20 @@
       = f.simple_fields_for :traits do |trait|
         = render 'trait_fields', f: trait
       .links
-        = link_to_add_association 'Add trait', f, :traits
+        = link_to_add_association "Add trait", f, :traits
   %div
     %h3 Actions
     #actions
       = f.simple_fields_for :actions do |action|
         = render 'action_fields', f: action
       .links
-        = link_to_add_association 'Add action', f, :actions
+        = link_to_add_association "Add action", f, :actions
   %div
     %h3 Reactions
     #reactions
       = f.simple_fields_for :reactions do |reaction|
         = render 'reaction_fields', f: reaction
       .links
-        = link_to_add_association 'Add reaction', f, :reactions
+        = link_to_add_association "Add reaction", f, :reactions
 
-  = f.button :submit
+  = f.button :submit, class: 'btn-primary'
