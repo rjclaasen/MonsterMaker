@@ -68,7 +68,9 @@
   = render @monster.reactions
 
 
-= link_to 'Back', monsters_path, class: "btn btn-outline-secondary"
+= link_to "Back", monsters_path, class: 'btn btn-outline-secondary'
 - if user_signed_in? && @monster.author == current_user
   |
-  = link_to 'Edit', edit_monster_path(@monster), class: "btn btn-outline-primary"
+  = link_to "Edit", edit_monster_path(@monster), class: 'btn btn-outline-primary'
+  |
+  = link_to "Delete", monster_path(@monster), method: :delete, data: { confirm: "This action cannot be reversed. Are you sure?" }, class: 'btn btn-outline-danger'

@@ -54,9 +54,11 @@ class MonstersController < ApplicationController
   # DELETE /monsters/1
   # DELETE /monsters/1.json
   def destroy
-    @monster.destroy
-    flash[:success] = "Monster deleted"
-    redirect_to request.referrer || monsters_url
+    if @monster.destroy
+      redirect_to monsters_path, notice: "Monster deleted."
+    else
+      redirect_to @monster, notice: "Failed to delete monster."
+    end
   end
 
   private
