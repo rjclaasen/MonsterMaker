@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_183646) do
+ActiveRecord::Schema.define(version: 2020_09_21_132653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2020_05_29_183646) do
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
-    t.string "hitPointsAndDice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -54,6 +53,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_183646) do
     t.string "alignment"
     t.string "armorSource"
     t.bigint "user_id"
+    t.integer "hitPoints"
+    t.string "hitDice"
     t.index ["created_at"], name: "index_monsters_on_created_at"
     t.index ["user_id"], name: "index_monsters_on_user_id"
   end

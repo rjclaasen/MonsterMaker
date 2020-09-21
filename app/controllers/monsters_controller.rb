@@ -81,7 +81,7 @@ class MonstersController < ApplicationController
         whitelisted[:reactions_attributes] = whitelisted[:reactions] if whitelisted.has_key?(:reactions)
       }.except(:traits).except(:actions).except(:reactions)
         .permit(:id, :name, :size, :type, :alignment, :armorClass, 
-        :armorSource, :hitPointsAndDice, :speed, :strength, :dexterity, 
+        :armorSource, :hitPoints, :hitDice, :speed, :strength, :dexterity, 
         :constitution, :intelligence, :wisdom, :charisma, :savingThrows, 
         :skills, :damageVulnerabilities, :damageResistances, :damageImmunities, 
         :conditionImmunities, :senses, :languages, :challenge,
