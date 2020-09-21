@@ -2,6 +2,8 @@
 
 This is a website dedicated to the creation of Monsters in Dungeons and Dragons 5th edition.
 
+Very WIP, currently only intended for personal use. A temporary somewhat live version of this repository can be found [here](https://monstermaker.herokuapp.com/).
+
 ## License
 
 All source code is available under the GNU General Public License. See [LICENSE](LICENSE) for details.
