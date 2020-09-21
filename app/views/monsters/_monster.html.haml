@@ -1,6 +1,76 @@
-%li{:id => "monster-#{monster.id}"}
-  %span.name= monster.name
-  %span.picture
-    = image_tag monster.picture.url if monster.picture?
-    %span.timestamp
-      Posted #{time_ago_in_words(monster.created_at)} ago.
+.stat-block
+  .creature-heading
+    %h1= @monster.name
+    .subtitle= "#{@monster.size} #{@monster.type}, #{@monster.alignment}"
+
+  = render "tapered_rule"
+
+  .top-stats
+    .property-line
+      %h4 Armor Class
+      = "#{@monster.armorClass} (#{@monster.armorSource})"
+    .property-line
+      %h4 Hit Points
+      = "#{@monster.hitPoints} (#{@monster.hitDice})"
+    .property-line
+      %h4 Speed
+      = @monster.speed
+
+    = render "tapered_rule"
+
+    %table.attributes-table
+      %tr
+        %th STR
+        %th DEX
+        %th CON
+        %th INT
+        %th WIS
+        %th CHA
+      %tr
+        %td= @monster.strength
+        %td= @monster.dexterity
+        %td= @monster.constitution
+        %td= @monster.intelligence
+        %td= @monster.wisdom
+        %td= @monster.charisma
+
+    = render "tapered_rule"
+
+    .property-line
+      %h4 Saving Throws
+      = @monster.savingThrows
+    .property-line
+      %h4 Skills
+      = @monster.skills
+    .property-line
+      %h4 Damage Vulnerabilities
+      = @monster.damageVulnerabilities
+    .property-line
+      %h4 Damage Resistances
+      = @monster.damageResistances
+    .property-line
+      %h4 Damage Immunities
+      = @monster.damageImmunities
+    .property-line
+      %h4 Condition Immunities
+      = @monster.conditionImmunities
+    .property-line
+      %h4 Senses
+      = @monster.senses
+    .property-line
+      %h4 Languages
+      = @monster.languages
+    .property-line
+      %h4 Challenge
+      = @monster.challenge
+    
+    = render "tapered_rule"
+
+  = render @monster.traits
+
+  %h3 Actions
+  = render @monster.actions
+
+  %h3 Reactions
+  = render @monster.reactions
+  

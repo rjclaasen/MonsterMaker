@@ -1,3 +1,52 @@
 // Place all the styles related to the Monsters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tapered-rule {
+  fill: #922610;
+  stroke: #922610;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-block {
+  .creature-heading {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0px;
+      text-align: left;
+    }
+
+    .subtitle {
+      font-style: italic;
+    }
+  }
+  
+  .attributes-table {
+    td, th {
+      width: 50px;
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-top: 1.2rem;
+    border-bottom: 1px solid #7A200D;
+    font-size: 1.45rem;
+    letter-spacing: 0.05rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 2px;
+  }
+
+  .property-block {
+    margin-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+}
